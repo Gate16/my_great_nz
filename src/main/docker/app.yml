@@ -1,0 +1,22 @@
+version: '2'
+services:
+    my_great_nz-app:
+        image: my_great_nz
+        external_links:
+            - my_great_nz-postgresql:postgresql
+            - my_great_nz-elasticsearch:elasticsearch
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/my_great_nz
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
+        ports:
+            - 8080:8080
+    my_great_nz-postgresql:
+        extends:
+            file: postgresql.yml
+            service: my_great_nz-postgresql
+    my_great_nz-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: my_great_nz-elasticsearch

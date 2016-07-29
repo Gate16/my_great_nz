@@ -1,0 +1,10 @@
+version: '2'
+services:
+    my_great_nz-elasticsearch:
+        container_name: my_great_nz-elasticsearch
+        image: elasticsearch:1.7.5
+        # volumes:
+        #     - ~/volumes/jhipster/my_great_nz/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300

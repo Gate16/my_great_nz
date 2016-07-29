@@ -1,0 +1,12 @@
+version: '2'
+services:
+    my_great_nz-postgresql:
+        container_name: my_great_nz-postgresql
+        image: postgres:9.5.3
+        # volumes:
+        #     - ~/volumes/jhipster/my_great_nz/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=my_great_nz
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
