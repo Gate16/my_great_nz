@@ -4,7 +4,7 @@
      <span><h1>What's Important to you?</h1> </span>
      
      <form class ="inputForm" id="inputForm" action="/#/result">
-       <div class='typeahead-demo' ng-controller="TypeaheadCtrl">
+       <div class='typeahead-demo' ng-controller="TypeaheadController">
          <span class= 'sameLine inputTitle' ><h3>Profession</h3></span>
          <input name= 'profession' class='sameLine' type="text" ng-model="selected" uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8" class="form-control">
        </div>
@@ -37,7 +37,7 @@
            <input class='sameLine ' min='0' name= 'age' type="number" ng-model="selected" class="form-control">
         </div>
        <hr />
-       <div class='typeahead-demo' ng-controller="TypeaheadCtrl">
+       <div class='typeahead-demo' ng-controller="TypeaheadController">
          <span class= 'sameLine inputTitle' ><h3>Nationality</h3></span>
          <input name='nationality' class='sameLine' type="text" ng-model="selected" uib-typeahead="nationality for nationality in nationalities | filter:$viewValue | limitTo:8" class="form-control">
        </div>

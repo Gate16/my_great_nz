@@ -7,7 +7,7 @@
 
     angular
     	.module('myGreatNzApp')
-    	.controller('TypeaheadCtrl',TypeAheadController);
+    	.controller('TypeaheadController',TypeAheadController);
     
     angular
 	.module('myGreatNzApp')
@@ -138,13 +138,6 @@
 
     	  $scope.appendToEl = angular.element(document.querySelector('#dropdown-long-content'));
     	}
-    function submitForm()
-    {
-      var form = document.getElementById("inputForm");
-      form.action("result.html");
-      form.submit();
-      
-    }
 })();
 
 
