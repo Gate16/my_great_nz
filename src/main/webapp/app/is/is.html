@@ -32,7 +32,8 @@
                     </div>
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                                chart-data="industryData" chart-labels="labels_years" chart-series="industrySeries"
+                                chart-options="{scaleStartValue: 0}">
                         </canvas>
 
                     </div>
@@ -42,11 +43,28 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Profession</h3>
                     </div>
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                                chart-data="professionData" chart-labels="labels_years" chart-series="professionSeries"
+                                chart-options="{scaleStartValue: 0}">
+                        </canvas>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Income</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="incomeData" chart-labels="labels_income" chart-series="incomeSeries"
+                                chart-options="{scaleStartValue: 0}">
                         </canvas>
 
                     </div>
@@ -56,11 +74,11 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Dwelling</h3>
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        <canvas id="pie" class="chart chart-pie"
+                                chart-data="dwellingData" chart-labels="labels_dwelling" chart-options="options">
                         </canvas>
 
                     </div>
@@ -70,11 +88,11 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Languages spoken</h3>
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="languagesData" chart-labels="labels_languages">
                         </canvas>
 
                     </div>
@@ -84,18 +102,60 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Country of Birth</h3>
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="countryData" chart-labels="labels_country">
                         </canvas>
 
                     </div>
                 </div>
             </div>
 
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Transport</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="transportData" chart-labels="labels_transport">
+                        </canvas>
 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Education</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-hover ">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Education</th>
+                                <th>2006</th>
+                                <th>2013</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="x in education">
+                                <td>{{ x.no }}</td>
+                                <td>{{ x.Education }}</td>
+                                <td>{{ x.year_2006 }}</td>
+                                <td>{{ x.year_2013 }}</td>
+                            </tr>
+                            </tbody>
+                            </table>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
