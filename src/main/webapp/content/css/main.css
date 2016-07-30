@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway%7CShrikhand';
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -65,6 +67,14 @@ Developement Ribbon
     text-shadow: 0 0 5px #444;
     pointer-events: none;
 }
+/* ==========================================================================
+General Navbar styles
+========================================================================== */
+.webPageTitle
+{
+font-family: 'Shrikhand', cursive;	
+}
+
 
 /* ==========================================================================
 Version number in navbar
