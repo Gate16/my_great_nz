@@ -1,0 +1,30 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "interestArea",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "year2006",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year2013",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160730073524",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "census",
+    "pagination": "infinite-scroll"
+}
