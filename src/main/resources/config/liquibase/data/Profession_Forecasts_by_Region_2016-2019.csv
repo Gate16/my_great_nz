@@ -1,4 +1,4 @@
-Region;Profession ID;Professio;2016;2017;2018;2019;Growth;Growth 
+region;profession_id;profession_name;year_2016;year_2017;year_2018;year_2019;growth;growth_percentage
 Northland;111;Chief Executives, General Managers and Legislators;204;2072;2108;2134;94;1.5
 Northland;121;Farmers and Farm Managers;3778;3695;3621;3519;-259;-2.3
 Northland;131;Advertising, Public Relations and Sales Managers;580;601;624;645;65;3.6
@@ -96,40 +96,40 @@ Northland;841;Farm, Forestry and Garden Workers;2825;2842;2873;2881;56;0.7
 Northland;851;Food Preparation Assistants;448;446;448;448;0;0.0
 Northland;891;Freight Handlers and Shelf Fillers;273;275;278;280;7;0.9
 Northland;899;Miscellaneous Labourers;2086;2119;2148;2163;77;1.2
-Auckland;111;Chief Executives, General Managers and Legislators;37459;3848;39616;40646;3,187;2.8
+Auckland;111;Chief Executives, General Managers and Legislators;37459;3848;39616;40646;3187;2.8
 Auckland;121;Farmers and Farm Managers;5062;4971;4893;4773;-290;-1.9
-Auckland;131;Advertising, Public Relations and Sales Managers;2277;23785;24904;25975;3,205;4.5
-Auckland;132;Business Administration Managers;29681;30875;32178;33421;3,74;4.0
-Auckland;133;Construction, Distribution and Production Managers;19085;19582;19981;20258;1,173;2.0
+Auckland;131;Advertising, Public Relations and Sales Managers;2277;23785;24904;25975;3205;4.5
+Auckland;132;Business Administration Managers;29681;30875;32178;33421;374;4.0
+Auckland;133;Construction, Distribution and Production Managers;19085;19582;19981;20258;1173;2.0
 Auckland;134;Education, Health and Welfare Services Managers;4928;5159;5389;5604;676;4.4
 Auckland;135;ICT Managers;3931;412;4328;4531;601;4.9
 Auckland;139;Miscellaneous Specialist Managers;436;4551;4751;4938;577;4.2
 Auckland;141;Accommodation and Hospitality Managers;8197;8437;874;9019;822;3.2
-Auckland;142;Retail Managers;13718;14003;14406;14775;1,057;2.5
-Auckland;149;Miscellaneous Hospitality, Retail and Service Managers;8949;9299;9691;10065;1,117;4.0
+Auckland;142;Retail Managers;13718;14003;14406;14775;1057;2.5
+Auckland;149;Miscellaneous Hospitality, Retail and Service Managers;8949;9299;9691;10065;1117;4.0
 Auckland;211;Arts Professionals;381;399;411;4219;409;3.5
 Auckland;212;Media Professionals;6503;6696;6928;7148;645;3.2
-Auckland;221;Accountants, Auditors and Company Secretaries;16282;1679;17348;17877;1,595;3.2
+Auckland;221;Accountants, Auditors and Company Secretaries;16282;1679;17348;17877;1595;3.2
 Auckland;222;Financial Brokers and Dealers, and Investment Advisers;4776;4801;4845;4874;98;0.7
 Auckland;223;Human Resource and Training Professionals;5747;5874;6016;6146;399;2.3
-Auckland;224;Information and Organisation Professionals;13367;1375;14175;14576;1,209;2.9
-Auckland;225;Sales, Marketing and Public Relations Professionals;12363;12769;13226;13658;1,295;3.4
+Auckland;224;Information and Organisation Professionals;13367;1375;14175;14576;1209;2.9
+Auckland;225;Sales, Marketing and Public Relations Professionals;12363;12769;13226;13658;1295;3.4
 Auckland;231;Air and Marine Transport Professionals;2624;2645;267;2685;60;0.8
-Auckland;232;Architects, Designers, Planners and Surveyors;12026;12493;12997;13483;1,456;3.9
-Auckland;233;Engineering Professionals;10421;10793;11153;11475;1,054;3.3
+Auckland;232;Architects, Designers, Planners and Surveyors;12026;12493;12997;13483;1456;3.9
+Auckland;233;Engineering Professionals;10421;10793;11153;11475;1054;3.3
 Auckland;234;Natural and Physical Science Professionals;4157;4295;4448;4608;451;3.5
-Auckland;241;School Teachers;31307;32152;32998;3368;2,373;2.5
+Auckland;241;School Teachers;31307;32152;32998;3368;2373;2.5
 Auckland;242;Tertiary Education Teachers;6241;6274;6293;6268;27;0.1
 Auckland;249;Miscellaneous Education Professionals;3949;4028;4102;415;201;1.7
 Auckland;251;Health Diagnostic and Promotion Professionals;4141;4333;4562;4818;676;5.2
 Auckland;252;Health Therapy Professionals;4473;4646;4863;5129;657;4.7
 Auckland;253;Medical Practitioners;567;5892;6172;6514;844;4.7
-Auckland;254;Midwifery and Nursing Professionals;13714;14122;14669;15379;1,665;3.9
-Auckland;261;Business and Systems Analysts, and Programmers;18268;19122;20053;20966;2,698;4.7
+Auckland;254;Midwifery and Nursing Professionals;13714;14122;14669;15379;1665;3.9
+Auckland;261;Business and Systems Analysts, and Programmers;18268;19122;20053;20966;2698;4.7
 Auckland;262;Database and Systems Administrators, and ICT Security Specialists;2671;2748;2834;2915;244;3.0
 Auckland;263;ICT Network and Support Professionals;3406;3566;3744;3919;512;4.8
 Auckland;271;Legal Professionals;7824;8143;8485;8813;989;4.0
-Auckland;272;Social and Welfare Professionals;11543;11916;12338;12774;1,231;3.4
+Auckland;272;Social and Welfare Professionals;11543;11916;12338;12774;1231;3.4
 Auckland;311;Agricultural, Medical and Science Technicians;4007;4058;4121;4184;178;1.5
 Auckland;312;Building and Engineering Technicians;7334;7559;7773;7959;624;2.8
 Auckland;313;ICT and Telecommunications Technicians;4188;4191;4209;4216;28;0.2
@@ -143,7 +143,7 @@ Auckland;333;Glaziers, Plasterers and Tilers;3103;3335;3544;3734;631;6.4
 Auckland;334;Plumbers;3266;3486;3676;3846;580;5.6
 Auckland;341;Electricians;572;6076;6396;6682;962;5.3
 Auckland;342;Electronics and Telecommunications Trades Workers;3531;3633;3719;3784;253;2.3
-Auckland;351;Food Trades Workers;15153;1578;16535;17262;2,11;4.4
+Auckland;351;Food Trades Workers;15153;1578;16535;17262;211;4.4
 Auckland;361;Animal Attendants and Trainers, and Shearers;1484;1532;159;1642;159;3.4
 Auckland;362;Horticultural Trades Workers;5032;5085;5136;5177;145;1.0
 Auckland;391;Hairdressers;2922;2953;3009;3049;127;1.4
@@ -155,15 +155,15 @@ Auckland;411;Health and Welfare Support Workers;6184;6449;676;7116;932;4.8
 Auckland;421;Child Carers;3233;3318;3393;3455;222;2.2
 Auckland;422;Education Aides;4297;435;4391;4401;105;0.8
 Auckland;423;Personal Carers and Assistants;10972;11149;11418;11787;815;2.4
-Auckland;431;Hospitality Workers;18432;18878;19462;19984;1,552;2.7
-Auckland;441;Defence Force Members, Fire Fighters and Police;869;9058;9395;97;1,01;3.7
+Auckland;431;Hospitality Workers;18432;18878;19462;19984;1552;2.7
+Auckland;441;Defence Force Members, Fire Fighters and Police;869;9058;9395;97;101;3.7
 Auckland;442;Prison and Security Officers;5919;621;6485;674;821;4.4
 Auckland;451;Personal Service and Travel Workers;6844;6734;6648;653;-314;-1.6
 Auckland;452;Sports and Fitness Workers;6658;6918;7201;7456;798;3.8
-Auckland;511;Contract, Program and Project Administrators;7967;8348;8747;9129;1,163;4.6
-Auckland;512;Office and Practice Managers;13788;14616;15499;16364;2,577;5.9
-Auckland;521;Personal Assistants and Secretaries;5748;5314;4874;4409;-1,338;-8.5
-Auckland;531;General Clerks;14047;13348;12635;11852;-2,195;-5.5
+Auckland;511;Contract, Program and Project Administrators;7967;8348;8747;9129;1163;4.6
+Auckland;512;Office and Practice Managers;13788;14616;15499;16364;2577;5.9
+Auckland;521;Personal Assistants and Secretaries;5748;5314;4874;4409;-1338;-8.5
+Auckland;531;General Clerks;14047;13348;12635;11852;-2195;-5.5
 Auckland;532;Keyboard Operators;1075;974;865;758;-316;-11.0
 Auckland;541;Call or Contact Centre Information Clerks;255;2486;2426;2357;-193;-2.6
 Auckland;542;Receptionists;9405;9425;9492;9602;197;0.7
@@ -172,9 +172,9 @@ Auckland;552;Financial and Insurance Clerks;4744;4565;4399;4288;-456;-3.3
 Auckland;561;Clerical and Office Support Workers;61;6142;6177;6191;91;0.5
 Auckland;591;Logistics Clerks;9972;10136;10337;10504;533;1.7
 Auckland;599;Miscellaneous Clerical and Administrative Workers;866;8851;905;9223;562;2.1
-Auckland;611;Insurance Agents and Sales Representatives;26001;26848;27835;28748;2,747;3.4
+Auckland;611;Insurance Agents and Sales Representatives;26001;26848;27835;28748;2747;3.4
 Auckland;612;Real Estate Sales Agents;658;6835;7148;7467;888;4.3
-Auckland;621;Sales Assistants and Salespersons;37457;37662;38123;38462;1,005;0.9
+Auckland;621;Sales Assistants and Salespersons;37457;37662;38123;38462;1005;0.9
 Auckland;631;Checkout Operators and Office Cashiers;5628;5746;5889;6018;389;2.3
 Auckland;639;Miscellaneous Sales Support Workers;3432;3373;3329;327;-161;-1.6
 Auckland;711;Machine Operators;8188;8298;8398;8456;268;1.1
@@ -192,7 +192,7 @@ Auckland;839;Miscellaneous Factory Process Workers;218;2251;2309;2359;179;2.7
 Auckland;841;Farm, Forestry and Garden Workers;628;6275;6287;6257;-23;-0.1
 Auckland;851;Food Preparation Assistants;5537;5674;5853;602;483;2.8
 Auckland;891;Freight Handlers and Shelf Fillers;1635;1664;1703;1737;102;2.0
-Auckland;899;Miscellaneous Labourers;15861;16271;16685;17032;1,171;2.4
+Auckland;899;Miscellaneous Labourers;15861;16271;16685;17032;1171;2.4
 Waikato;111;Chief Executives, General Managers and Legislators;6282;6491;6717;692;637;3.3
 Waikato;121;Farmers and Farm Managers;10862;10752;10666;10492;-370;-1.1
 Waikato;131;Advertising, Public Relations and Sales Managers;2383;2507;2641;2766;383;5.1
@@ -804,7 +804,7 @@ Wellington;251;Health Diagnostic and Promotion Professionals;1316;1363;1422;1487
 Wellington;252;Health Therapy Professionals;1222;1261;1312;1376;153;4.0
 Wellington;253;Medical Practitioners;1689;174;1808;1893;204;3.9
 Wellington;254;Midwifery and Nursing Professionals;4877;4981;5133;5343;466;3.1
-Wellington;261;Business and Systems Analysts, and Programmers;10453;10867;11314;11742;1,288;4.0
+Wellington;261;Business and Systems Analysts, and Programmers;10453;10867;11314;11742;1288;4.0
 Wellington;262;Database and Systems Administrators, and ICT Security Specialists;1603;1634;1669;1699;97;2.0
 Wellington;263;ICT Network and Support Professionals;1612;1674;174;1803;190;3.8
 Wellington;271;Legal Professionals;3695;3819;3948;4067;372;3.3
@@ -1260,11 +1260,11 @@ West Coast;841;Farm, Forestry and Garden Workers;776;776;779;776;0;0.0
 West Coast;851;Food Preparation Assistants;149;151;153;156;6;1.4
 West Coast;891;Freight Handlers and Shelf Fillers;94;96;98;100;7;2.3
 West Coast;899;Miscellaneous Labourers;762;801;842;883;121;5.0
-Canterbury;111;Chief Executives, General Managers and Legislators;10602;10947;11309;11629;1,027;3.1
+Canterbury;111;Chief Executives, General Managers and Legislators;10602;10947;11309;11629;1027;3.1
 Canterbury;121;Farmers and Farm Managers;8554;8392;8252;804;-515;-2.0
 Canterbury;131;Advertising, Public Relations and Sales Managers;4548;4756;4981;5194;646;4.5
-Canterbury;132;Business Administration Managers;8618;9022;9447;9849;1,231;4.5
-Canterbury;133;Construction, Distribution and Production Managers;9255;9678;10032;10315;1,06;3.7
+Canterbury;132;Business Administration Managers;8618;9022;9447;9849;1231;4.5
+Canterbury;133;Construction, Distribution and Production Managers;9255;9678;10032;10315;106;3.7
 Canterbury;134;Education, Health and Welfare Services Managers;1767;183;1892;1947;180;3.3
 Canterbury;135;ICT Managers;729;762;797;832;103;4.5
 Canterbury;139;Miscellaneous Specialist Managers;1304;1359;1415;1467;163;4.0
@@ -1325,7 +1325,7 @@ Canterbury;442;Prison and Security Officers;1852;1944;2032;2114;262;4.5
 Canterbury;451;Personal Service and Travel Workers;2198;2176;2162;2135;-63;-1.0
 Canterbury;452;Sports and Fitness Workers;2353;24;2459;2505;152;2.1
 Canterbury;511;Contract, Program and Project Administrators;3619;3825;4036;4237;617;5.4
-Canterbury;512;Office and Practice Managers;6023;6427;685;7263;1,239;6.4
+Canterbury;512;Office and Practice Managers;6023;6427;685;7263;1239;6.4
 Canterbury;521;Personal Assistants and Secretaries;2153;1984;1813;1634;-519;-8.8
 Canterbury;531;General Clerks;528;5056;4822;4557;-723;-4.8
 Canterbury;532;Keyboard Operators;359;318;278;238;-120;-12.8
@@ -1356,7 +1356,7 @@ Canterbury;839;Miscellaneous Factory Process Workers;1266;1323;1374;1419;153;3.9
 Canterbury;841;Farm, Forestry and Garden Workers;7136;7144;7175;7148;12;0.1
 Canterbury;851;Food Preparation Assistants;2419;2411;2419;2419;0;0.0
 Canterbury;891;Freight Handlers and Shelf Fillers;1299;1321;1353;138;81;2.0
-Canterbury;899;Miscellaneous Labourers;9523;99;10282;10629;1,107;3.7
+Canterbury;899;Miscellaneous Labourers;9523;99;10282;10629;1107;3.7
 Otago;111;Chief Executives, General Managers and Legislators;381;3968;414;43;490;4.1
 Otago;121;Farmers and Farm Managers;4796;4763;4738;4651;-145;-1.0
 Otago;131;Advertising, Public Relations and Sales Managers;1462;1548;1645;1739;277;6.0
@@ -1551,100 +1551,100 @@ Southland;841;Farm, Forestry and Garden Workers;3057;3095;3145;3168;111;1.2
 Southland;851;Food Preparation Assistants;452;458;466;474;21;1.6
 Southland;891;Freight Handlers and Shelf Fillers;201;204;208;211;10;1.6
 Southland;899;Miscellaneous Labourers;1858;1911;197;2024;166;2.9
-New Zealand;111;Chief Executives, General Managers and Legislators;90351;92829;95541;9795;7,6;2.7
-New Zealand;121;Farmers and Farm Managers;62177;61068;60117;58634;-3,543;-1.9
-New Zealand;131;Advertising, Public Relations and Sales Managers;42694;44587;46663;48634;5,94;4.4
-New Zealand;132;Business Administration Managers;72028;74968;78131;81112;9,085;4.0
-New Zealand;133;Construction, Distribution and Production Managers;55699;57288;58503;59314;3,615;2.1
-New Zealand;134;Education, Health and Welfare Services Managers;14889;15538;16184;16783;1,894;4.1
-New Zealand;135;ICT Managers;862;9015;9444;9856;1,236;4.6
-New Zealand;139;Miscellaneous Specialist Managers;11538;12012;12511;12972;1,434;4.0
-New Zealand;141;Accommodation and Hospitality Managers;28176;28779;29589;30299;2,123;2.5
-New Zealand;142;Retail Managers;38918;39611;40622;41521;2,603;2.2
-New Zealand;149;Miscellaneous Hospitality, Retail and Service Managers;21656;22491;23427;24316;2,66;3.9
-New Zealand;211;Arts Professionals;10244;10694;11015;11302;1,058;3.3
-New Zealand;212;Media Professionals;12616;12964;13385;13778;1,162;3.0
-New Zealand;221;Accountants, Auditors and Company Secretaries;36487;37666;38947;40154;3,667;3.2
+New Zealand;111;Chief Executives, General Managers and Legislators;90351;92829;95541;9795;76;2.7
+New Zealand;121;Farmers and Farm Managers;62177;61068;60117;58634;-3543;-1.9
+New Zealand;131;Advertising, Public Relations and Sales Managers;42694;44587;46663;48634;594;4.4
+New Zealand;132;Business Administration Managers;72028;74968;78131;81112;9085;4.0
+New Zealand;133;Construction, Distribution and Production Managers;55699;57288;58503;59314;3615;2.1
+New Zealand;134;Education, Health and Welfare Services Managers;14889;15538;16184;16783;1894;4.1
+New Zealand;135;ICT Managers;862;9015;9444;9856;1236;4.6
+New Zealand;139;Miscellaneous Specialist Managers;11538;12012;12511;12972;1434;4.0
+New Zealand;141;Accommodation and Hospitality Managers;28176;28779;29589;30299;2123;2.5
+New Zealand;142;Retail Managers;38918;39611;40622;41521;2603;2.2
+New Zealand;149;Miscellaneous Hospitality, Retail and Service Managers;21656;22491;23427;24316;266;3.9
+New Zealand;211;Arts Professionals;10244;10694;11015;11302;1058;3.3
+New Zealand;212;Media Professionals;12616;12964;13385;13778;1162;3.0
+New Zealand;221;Accountants, Auditors and Company Secretaries;36487;37666;38947;40154;3667;3.2
 New Zealand;222;Financial Brokers and Dealers, and Investment Advisers;11189;11257;11357;11423;233;0.7
-New Zealand;223;Human Resource and Training Professionals;13824;14164;14534;14868;1,044;2.5
-New Zealand;224;Information and Organisation Professionals;36965;37907;38927;39854;2,889;2.5
-New Zealand;225;Sales, Marketing and Public Relations Professionals;22977;23715;24539;25306;2,329;3.3
+New Zealand;223;Human Resource and Training Professionals;13824;14164;14534;14868;1044;2.5
+New Zealand;224;Information and Organisation Professionals;36965;37907;38927;39854;2889;2.5
+New Zealand;225;Sales, Marketing and Public Relations Professionals;22977;23715;24539;25306;2329;3.3
 New Zealand;231;Air and Marine Transport Professionals;7373;7443;7534;7588;215;1.0
-New Zealand;232;Architects, Designers, Planners and Surveyors;26165;27174;28261;29304;3,139;3.8
-New Zealand;233;Engineering Professionals;28552;29591;30596;31479;2,927;3.3
-New Zealand;234;Natural and Physical Science Professionals;17061;17633;18281;1891;1,848;3.5
+New Zealand;232;Architects, Designers, Planners and Surveyors;26165;27174;28261;29304;3139;3.8
+New Zealand;233;Engineering Professionals;28552;29591;30596;31479;2927;3.3
+New Zealand;234;Natural and Physical Science Professionals;17061;17633;18281;1891;1848;3.5
 New Zealand;241;School Teachers;94619;96813;9898;100619;6;2.1
 New Zealand;242;Tertiary Education Teachers;17503;17577;17615;17532;29;0.1
 New Zealand;249;Miscellaneous Education Professionals;10725;1092;11104;11215;490;1.5
-New Zealand;251;Health Diagnostic and Promotion Professionals;12165;12689;13312;14001;1,836;4.8
-New Zealand;252;Health Therapy Professionals;12236;12677;13227;13906;1,67;4.4
-New Zealand;253;Medical Practitioners;14645;1515;15797;16606;1,961;4.3
-New Zealand;254;Midwifery and Nursing Professionals;4384;44934;46456;48493;4,652;3.4
-New Zealand;261;Business and Systems Analysts, and Programmers;39575;41367;43302;4518;5,604;4.5
+New Zealand;251;Health Diagnostic and Promotion Professionals;12165;12689;13312;14001;1836;4.8
+New Zealand;252;Health Therapy Professionals;12236;12677;13227;13906;167;4.4
+New Zealand;253;Medical Practitioners;14645;1515;15797;16606;1961;4.3
+New Zealand;254;Midwifery and Nursing Professionals;4384;44934;46456;48493;4652;3.4
+New Zealand;261;Business and Systems Analysts, and Programmers;39575;41367;43302;4518;5604;4.5
 New Zealand;262;Database and Systems Administrators, and ICT Security Specialists;7244;7447;7671;7877;633;2.8
-New Zealand;263;ICT Network and Support Professionals;7522;7842;8189;8523;1,001;4.3
-New Zealand;271;Legal Professionals;18728;19505;20329;21122;2,394;4.1
-New Zealand;272;Social and Welfare Professionals;33885;34883;36009;37164;3,28;3.1
+New Zealand;263;ICT Network and Support Professionals;7522;7842;8189;8523;1001;4.3
+New Zealand;271;Legal Professionals;18728;19505;20329;21122;2394;4.1
+New Zealand;272;Social and Welfare Professionals;33885;34883;36009;37164;328;3.1
 New Zealand;311;Agricultural, Medical and Science Technicians;14482;14691;14943;15175;693;1.6
-New Zealand;312;Building and Engineering Technicians;20354;21028;21663;22201;1,847;2.9
+New Zealand;312;Building and Engineering Technicians;20354;21028;21663;22201;1847;2.9
 New Zealand;313;ICT and Telecommunications Technicians;908;9048;9043;9008;-71;-0.3
 New Zealand;321;Automotive Electricians and Mechanics;18811;1857;18415;18157;-654;-1.2
-New Zealand;322;Fabrication Engineering Trades Workers;13399;13898;14357;14688;1,289;3.1
+New Zealand;322;Fabrication Engineering Trades Workers;13399;13898;14357;14688;1289;3.1
 New Zealand;323;Mechanical Engineering Trades Workers;18478;18412;18301;18069;-409;-0.7
 New Zealand;324;Panelbeaters, and Vehicle Body Builders, Trimmers and Painters;465;4587;4496;4373;-277;-2.0
 New Zealand;331;Bricklayers, Carpenters and Joiners;17092;17434;17591;17607;515;1.0
-New Zealand;332;Floor Finishers and Painting Trades Workers;12591;13382;14054;14642;2,051;5.2
-New Zealand;333;Glaziers, Plasterers and Tilers;11676;1258;13386;14123;2,447;6.5
-New Zealand;334;Plumbers;11001;1176;12405;12974;1,973;5.7
-New Zealand;341;Electricians;177;18832;1983;20714;3,014;5.4
+New Zealand;332;Floor Finishers and Painting Trades Workers;12591;13382;14054;14642;2051;5.2
+New Zealand;333;Glaziers, Plasterers and Tilers;11676;1258;13386;14123;2447;6.5
+New Zealand;334;Plumbers;11001;1176;12405;12974;1973;5.7
+New Zealand;341;Electricians;177;18832;1983;20714;3014;5.4
 New Zealand;342;Electronics and Telecommunications Trades Workers;1017;10463;10684;10835;666;2.1
-New Zealand;351;Food Trades Workers;41884;43377;45203;46938;5,054;3.9
+New Zealand;351;Food Trades Workers;41884;43377;45203;46938;5054;3.9
 New Zealand;361;Animal Attendants and Trainers, and Shearers;7103;7385;7711;7998;895;4.0
 New Zealand;362;Horticultural Trades Workers;17552;17544;17542;17551;-1;0.0
 New Zealand;391;Hairdressers;93;9378;9532;9627;327;1.2
 New Zealand;392;Printing Trades Workers;3636;3466;3248;301;-626;-6.1
 New Zealand;393;Textile, Clothing and Footwear Trades Workers;2718;2733;2757;2765;47;0.6
 New Zealand;394;Wood Trades Workers;3509;3491;3469;3431;-78;-0.7
-New Zealand;399;Miscellaneous Technicians and Trades Workers;12944;13279;13648;13987;1,042;2.6
-New Zealand;411;Health and Welfare Support Workers;2156;22387;23373;24518;2,957;4.4
+New Zealand;399;Miscellaneous Technicians and Trades Workers;12944;13279;13648;13987;1042;2.6
+New Zealand;411;Health and Welfare Support Workers;2156;22387;23373;24518;2957;4.4
 New Zealand;421;Child Carers;9468;9685;9887;10056;587;2.0
 New Zealand;422;Education Aides;14104;14223;14302;14274;171;0.4
-New Zealand;423;Personal Carers and Assistants;41963;4248;43347;446;2,636;2.1
-New Zealand;431;Hospitality Workers;49218;50128;51403;5249;3,272;2.2
-New Zealand;441;Defence Force Members, Fire Fighters and Police;24759;2564;26418;27086;2,327;3.0
-New Zealand;442;Prison and Security Officers;16296;17043;17736;1836;2,064;4.1
+New Zealand;423;Personal Carers and Assistants;41963;4248;43347;446;2636;2.1
+New Zealand;431;Hospitality Workers;49218;50128;51403;5249;3272;2.2
+New Zealand;441;Defence Force Members, Fire Fighters and Police;24759;2564;26418;27086;2327;3.0
+New Zealand;442;Prison and Security Officers;16296;17043;17736;1836;2064;4.1
 New Zealand;451;Personal Service and Travel Workers;17091;17036;16998;16874;-217;-0.4
-New Zealand;452;Sports and Fitness Workers;19998;20655;21436;22124;2,126;3.4
-New Zealand;511;Contract, Program and Project Administrators;24904;26069;27273;28408;3,505;4.5
-New Zealand;512;Office and Practice Managers;43947;46616;49432;5216;8,213;5.9
-New Zealand;521;Personal Assistants and Secretaries;16598;15407;14197;12913;-3,686;-8.0
-New Zealand;531;General Clerks;4034;38454;36517;34364;-5,976;-5.2
+New Zealand;452;Sports and Fitness Workers;19998;20655;21436;22124;2126;3.4
+New Zealand;511;Contract, Program and Project Administrators;24904;26069;27273;28408;3505;4.5
+New Zealand;512;Office and Practice Managers;43947;46616;49432;5216;8213;5.9
+New Zealand;521;Personal Assistants and Secretaries;16598;15407;14197;12913;-3686;-8.0
+New Zealand;531;General Clerks;4034;38454;36517;34364;-5976;-5.2
 New Zealand;532;Keyboard Operators;3034;2726;2396;2076;-958;-11.9
 New Zealand;541;Call or Contact Centre Information Clerks;5096;4956;4823;4669;-427;-2.9
 New Zealand;542;Receptionists;28115;28187;28407;28714;599;0.7
 New Zealand;551;Accounting Clerks and Bookkeepers;28494;2883;29212;29491;997;1.2
-New Zealand;552;Financial and Insurance Clerks;12247;11842;11459;11179;-1,068;-3.0
+New Zealand;552;Financial and Insurance Clerks;12247;11842;11459;11179;-1068;-3.0
 New Zealand;561;Clerical and Office Support Workers;17292;17327;17343;17305;13;0.0
-New Zealand;591;Logistics Clerks;20857;21194;21598;21924;1,068;1.7
-New Zealand;599;Miscellaneous Clerical and Administrative Workers;20765;21147;21539;21861;1,095;1.7
-New Zealand;611;Insurance Agents and Sales Representatives;57947;5972;61767;63621;5,674;3.2
-New Zealand;612;Real Estate Sales Agents;1633;16897;17598;18307;1,978;3.9
-New Zealand;621;Sales Assistants and Salespersons;107705;10799;109007;109646;1,941;0.6
+New Zealand;591;Logistics Clerks;20857;21194;21598;21924;1068;1.7
+New Zealand;599;Miscellaneous Clerical and Administrative Workers;20765;21147;21539;21861;1095;1.7
+New Zealand;611;Insurance Agents and Sales Representatives;57947;5972;61767;63621;5674;3.2
+New Zealand;612;Real Estate Sales Agents;1633;16897;17598;18307;1978;3.9
+New Zealand;621;Sales Assistants and Salespersons;107705;10799;109007;109646;1941;0.6
 New Zealand;631;Checkout Operators and Office Cashiers;16654;16883;17182;1743;776;1.5
 New Zealand;639;Miscellaneous Sales Support Workers;9378;9315;9293;9235;-143;-0.5
-New Zealand;711;Machine Operators;22914;23359;23778;24058;1,143;1.6
-New Zealand;712;Stationary Plant Operators;8411;807;768;7368;-1,043;-4.3
+New Zealand;711;Machine Operators;22914;23359;23778;24058;1143;1.6
+New Zealand;712;Stationary Plant Operators;8411;807;768;7368;-1043;-4.3
 New Zealand;721;Mobile Plant Operators;20034;2038;20701;2086;826;1.4
-New Zealand;731;Automobile, Bus and Rail Drivers;14786;15282;15865;16396;1,61;3.5
+New Zealand;731;Automobile, Bus and Rail Drivers;14786;15282;15865;16396;161;3.5
 New Zealand;732;Delivery Drivers;5523;578;5961;6123;601;3.5
 New Zealand;733;Truck Drivers;26586;26847;27091;27186;600;0.7
-New Zealand;741;Storepersons;21703;22077;22533;22912;1,209;1.8
-New Zealand;811;Cleaners and Laundry Workers;42881;41988;41221;40638;-2,244;-1.8
-New Zealand;821;Construction and Mining Labourers;22504;23687;24736;2563;3,126;4.4
+New Zealand;741;Storepersons;21703;22077;22533;22912;1209;1.8
+New Zealand;811;Cleaners and Laundry Workers;42881;41988;41221;40638;-2244;-1.8
+New Zealand;821;Construction and Mining Labourers;22504;23687;24736;2563;3126;4.4
 New Zealand;831;Food Process Workers;25079;25231;25506;25725;646;0.9
 New Zealand;832;Packers and Product Assemblers;16224;16335;16471;16522;298;0.6
 New Zealand;839;Miscellaneous Factory Process Workers;8417;8646;8848;9014;597;2.3
 New Zealand;841;Farm, Forestry and Garden Workers;55381;55474;55772;55605;223;0.1
-New Zealand;851;Food Preparation Assistants;18811;19152;19631;20073;1,262;2.2
+New Zealand;851;Food Preparation Assistants;18811;19152;19631;20073;1262;2.2
 New Zealand;891;Freight Handlers and Shelf Fillers;7086;7197;7351;7481;395;1.8
-New Zealand;899;Miscellaneous Labourers;60352;62111;63894;65416;5,063;2.7
+New Zealand;899;Miscellaneous Labourers;60352;62111;63894;65416;5063;2.7

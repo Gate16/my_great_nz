@@ -1,0 +1,46 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "professionId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "professionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "year_2016",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year_2017",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year_2018",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year_2019",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "growth",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "growthPercentage",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20160730014049",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "profession",
+    "pagination": "infinite-scroll"
+}
