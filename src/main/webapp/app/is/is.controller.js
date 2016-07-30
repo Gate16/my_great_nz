@@ -4,7 +4,7 @@
 	angular.module('myGreatNzApp').controller('IsController', IsController);
 
 	IsController.$inject = [ '$scope', 'Principal', 'LoginService', '$state',
-			'$stateParams'];
+			'$stateParams', '$sce'];
 
 
     var introductions = new Map();
@@ -14,13 +14,19 @@
 
 
 	function IsController($scope, Principal, LoginService, $state,
-			$stateParams, Industries) {
+			$stateParams, $sce, Industries) {
 
         $scope.colors = Chart.defaults.global.colors;
 
 		var vm = this;
 		$scope.region = $stateParams.region;
-		$scope.industry = 'Construction';
+
+        $scope.map_url = $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?key=AIzaSyDqPw5bjILL-g1fbU56teCbY3eoM0-535M&q="
+            + $stateParams.region + "+New+Zealand");
+
+        console.log($sce);
+
+        $scope.industry = 'Construction';
 		$scope.introductionText = introductions.get($stateParams.region);
 
 		$scope.labels = [ '2016', '2017', '2018', '2019' ];
