@@ -7,7 +7,7 @@
     Census.$inject = ['$resource'];
 
     function Census ($resource) {
-        var resourceUrl =  'api/censuses/:id';
+        var resourceUrl =  'api/public/censuses/:id';
 
         return $resource(resourceUrl, {}, {
             'query': { method: 'GET', isArray: true},

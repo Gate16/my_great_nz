@@ -29,7 +29,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
  * REST controller for managing Census.
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/public")
 public class CensusResource {
 
     private final Logger log = LoggerFactory.getLogger(CensusResource.class);
@@ -54,7 +54,7 @@ public class CensusResource {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("census", "idexists", "A new census cannot already have an ID")).body(null);
         }
         Census result = censusService.save(census);
-        return ResponseEntity.created(new URI("/api/censuses/" + result.getId()))
+        return ResponseEntity.created(new URI("/api/public/censuses/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("census", result.getId().toString()))
             .body(result);
     }
@@ -98,7 +98,7 @@ public class CensusResource {
         throws URISyntaxException {
         log.debug("REST request to get a page of Censuses");
         Page<Census> page = censusService.findAll(pageable); 
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/censuses");
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/public/censuses");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
@@ -153,7 +153,7 @@ public class CensusResource {
         throws URISyntaxException {
         log.debug("REST request to search for a page of Censuses for query {}", query);
         Page<Census> page = censusService.search(query, pageable);
-        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/censuses");
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/public/_search/censuses");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

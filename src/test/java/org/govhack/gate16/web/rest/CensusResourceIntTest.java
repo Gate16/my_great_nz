@@ -103,7 +103,7 @@ public class CensusResourceIntTest {
 
         // Create the Census
 
-        restCensusMockMvc.perform(post("/api/censuses")
+        restCensusMockMvc.perform(post("/api/public/censuses")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(census)))
                 .andExpect(status().isCreated());
@@ -130,7 +130,7 @@ public class CensusResourceIntTest {
         censusRepository.saveAndFlush(census);
 
         // Get all the censuses
-        restCensusMockMvc.perform(get("/api/censuses?sort=id,desc"))
+        restCensusMockMvc.perform(get("/api/public/censuses?sort=id,desc"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(census.getId().intValue())))
@@ -148,7 +148,7 @@ public class CensusResourceIntTest {
         censusRepository.saveAndFlush(census);
 
         // Get the census
-        restCensusMockMvc.perform(get("/api/censuses/{id}", census.getId()))
+        restCensusMockMvc.perform(get("/api/public/censuses/{id}", census.getId()))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(census.getId().intValue()))
@@ -163,7 +163,7 @@ public class CensusResourceIntTest {
     @Transactional
     public void getNonExistingCensus() throws Exception {
         // Get the census
-        restCensusMockMvc.perform(get("/api/censuses/{id}", Long.MAX_VALUE))
+        restCensusMockMvc.perform(get("/api/public/censuses/{id}", Long.MAX_VALUE))
                 .andExpect(status().isNotFound());
     }
 
@@ -184,7 +184,7 @@ public class CensusResourceIntTest {
         updatedCensus.setYear2006(UPDATED_YEAR_2006);
         updatedCensus.setYear2013(UPDATED_YEAR_2013);
 
-        restCensusMockMvc.perform(put("/api/censuses")
+        restCensusMockMvc.perform(put("/api/public/censuses")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
                 .content(TestUtil.convertObjectToJsonBytes(updatedCensus)))
                 .andExpect(status().isOk());
@@ -213,7 +213,7 @@ public class CensusResourceIntTest {
         int databaseSizeBeforeDelete = censusRepository.findAll().size();
 
         // Get the census
-        restCensusMockMvc.perform(delete("/api/censuses/{id}", census.getId())
+        restCensusMockMvc.perform(delete("/api/public/censuses/{id}", census.getId())
                 .accept(TestUtil.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk());
 
@@ -233,7 +233,7 @@ public class CensusResourceIntTest {
         censusService.save(census);
 
         // Search the census
-        restCensusMockMvc.perform(get("/api/_search/censuses?query=id:" + census.getId()))
+        restCensusMockMvc.perform(get("/api/public/_search/censuses?query=id:" + census.getId()))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.[*].id").value(hasItem(census.getId().intValue())))
