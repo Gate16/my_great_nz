@@ -53,7 +53,8 @@
       $scope.selected = undefined;
    	  $scope.professions = ['Management', 'IT Professional', 'Human Resources', 'Finance', 'Real Estate', 'Farmer', 'Underwater Basket Weaver'];
       $scope.nationalities = ['New Zealand', 'China', 'India','Russia','Great Britian/United Kingdom', 'England', 'Ireland','Scotland','Wales','United States of America','Canada','Vietnam','Cambodia','Japan' ];
-   	  
+   	  $scope.industries = ['Agriculture','Tourism','Banking','Insurance','Media'];
+      
    	  // Any function returning a promise object can be used to load values asynchronously
       $scope.getLocation = function(val) {
     	    return $http.get('//maps.googleapis.com/maps/api/geocode/json', {

@@ -10,7 +10,8 @@
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
                     <input name="industry" type="text" class="form-control" placeholder="Your industry"
                            ng-model="selected"
-                           ng-required="true"/>
+                           ng-required="true"
+                           uib-typeahead="industry for industry in industries | filter:$viewValue | limitTo:8"/>
                 </div>
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
