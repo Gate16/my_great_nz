@@ -8,7 +8,8 @@
     IsController.$inject = ['$scope', 'Principal', 'LoginService', '$state', '$stateParams'];
 
     var introductions = new Map();
-    introductions.set('Auckland','Auckland, based around 2 large harbours, is a major city in the north of New Zealand’s North Island. In central Queen Street, the iconic Sky Tower has views of Viaduct Harbour, which is full of superyachts and lined with bars and cafes. Auckland Domain, the city’s oldest park, is based around an extinct volcano and home to the formal Wintergardens. Mission Bay Beach is minutes from Downtown.');
+    introductions.set('Auckland','Imagine an urban environment where everyone lives within half an hour of beautiful beaches, hiking trails and a dozen enchanting holiday islands. Add a sunny climate, a background rhythm of Polynesian culture and a passion for outstanding food, wine and shopping, and you’re beginning to get the picture of Auckland, New Zealand, our largest and most diverse city. More than just a city, Auckland is a whole region full of things to see and do. Best of all, with so many experiences close by it’s easy to hop from one adventure to the next!');
+    introductions.set('Christchurch','Christchurch is the gateway to New Zealands South Island. Bordered by hills and the Pacific Ocean, it is situated on the edge of the Canterbury Plains that stretch to the Southern Alps. Within two hours of the international airport, you can ski at a world-class alpine resort, play golf, bungy jump, raft, mountain bike, hot-air balloon, wind surf, whale watch and visit internationally-acclaimed wineries and gardens.');
     
     function IsController ($scope, Principal, LoginService, $state, $stateParams) {
         var vm = this;
