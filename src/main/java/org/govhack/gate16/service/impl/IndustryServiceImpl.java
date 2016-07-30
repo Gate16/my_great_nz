@@ -94,4 +94,11 @@ public class IndustryServiceImpl implements IndustryService{
         log.debug("Request to search for a page of Industries for query {}", query);
         return industrySearchRepository.search(queryStringQuery(query), pageable);
     }
+
+    public List<Industry> findByRegion(String region) {
+        log.debug("Request to get list of Industry by region: {}", region);
+
+        List<Industry> industries = industryRepository.findByRegion(region);
+        return industries;
+    }
 }

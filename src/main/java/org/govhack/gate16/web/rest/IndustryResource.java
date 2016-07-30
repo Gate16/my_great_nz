@@ -54,7 +54,7 @@ public class IndustryResource {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("industry", "idexists", "A new industry cannot already have an ID")).body(null);
         }
         Industry result = industryService.save(industry);
-        return ResponseEntity.created(new URI("/api/industries/" + result.getId()))
+        return ResponseEntity.created(new URI("/api/public/industries/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("industry", result.getId().toString()))
             .body(result);
     }
@@ -98,7 +98,7 @@ public class IndustryResource {
         throws URISyntaxException {
         log.debug("REST request to get a page of Industries");
         Page<Industry> page = industryService.findAll(pageable); 
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/industries");
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/public/industries");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
@@ -157,5 +157,28 @@ public class IndustryResource {
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
+
+    @RequestMapping(value = "/industries/regions/{region}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<Industry>  getIndustryByRegion(Pageable pageable, @PathVariable String region)
+            throws URISyntaxException{
+        log.debug("REST request to get Industries by Region : {}", region);
+
+        List<Industry> industries = industryService.findByRegion(region);
+
+//        return Optional.ofNullable(industries)
+//                .map(result -> new ResponseEntity<>(
+//                        result,
+//                        HttpStatus.OK))
+//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+
+        return industries;
+    }
+
+//        Page<Industry> page = industryService.findAll(pageable);
+//        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/public/industries");
+//        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
 
 }

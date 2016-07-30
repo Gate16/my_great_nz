@@ -49,4 +49,6 @@ public interface IndustryService {
      *  @return the list of entities
      */
     Page<Industry> search(String query, Pageable pageable);
+
+    List<Industry> findByRegion(String region);
 }

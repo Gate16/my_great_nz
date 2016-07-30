@@ -11,5 +11,5 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public interface IndustryRepository extends JpaRepository<Industry,Long> {
-
+    List<Industry> findByRegion(String region);
 }
