@@ -105,6 +105,11 @@ Main page styles
     background-size: contain;
 }
 
+td{
+  padding:2%;	
+	
+}
+
 .backgroundImage{
 	display: inline-block;
 	width: 100%;

@@ -1,25 +1,35 @@
 <div ng-cloak>
-    <div class="backgroundImage">
     <div class="centeredV">
      <span><h1>What's Important to you?</h1> </span>
      
      <form class ="inputForm" id="inputForm" action="/#/result">
-       <div class='typeahead-demo' ng-controller="TypeaheadController">
-         <span class= 'sameLine inputTitle' ><h3>Profession</h3></span>
-         <input name= 'profession' class='sameLine' type="text" ng-model="selected" uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8" class="form-control">
-       </div>
+       <table>
+       <tr>
+         <td><h3>Profession</h3></td>
+         <td> <div class='typeahead-demo' ng-controller="TypeaheadController">
+                <input name= 'profession' class='sameLine' type="text" ng-model="selected" uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8" class="form-control">
+              </div>
+         </td>
+       </tr> 
+       <tr>
+         <td> <h3 class='sameLine inputTitle'>Age</h3> </td>    
+         <td> <div>    
+                <input class='sameLine ' min='0' name= 'age' type="number" ng-model="selected" class="form-control">
+              </div>
+         </td>
+       </tr>
+       <tr>
+         <td><h3>Nationality</h3></td>
+         <td>
+           <div class='typeahead-demo' ng-controller="TypeaheadController">
+           <input name='nationality' class='sameLine' type="text" ng-model="selected" uib-typeahead="nationality for nationality in nationalities | filter:$viewValue | limitTo:8" class="form-control">
+           </div>
+         </td>
+       </tr>
+       </table>
        <hr />
-       <div ng-controller="ButtonController">
-         <span class= 'inputTitle' ><h3>Weather Preference</h3></span>
-         <div name="weather" class="btn-group">
-           <input type="hidden" name="weather" value={{radioModel}}></input>
-           <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Warm'">Warm</label>
-           <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Snowy'">Snowy</label>
-           <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'DC'">Don't Care</label>
-         </div>
-       </div> 
-        <hr />
        <div ng-controller="DropdownController" class='sameLine'>
+         <h3 class="sameLine inputTitle">Family</h3>
          <div class="btn-group sameLine" uib-dropdown>
            <button id="split-button" type="button" class="btn">{{selectedItem}}</button>
            <input type="hidden" name="family" value={{selectedItem}}></input>
@@ -32,18 +42,20 @@
            </ul>
          </div>
        </div>
-        <div  class='sameLine sameLinePadding'>
-           <h3 class='sameLine'>Age</h3>
-           <input class='sameLine ' min='0' name= 'age' type="number" ng-model="selected" class="form-control">
-        </div>
-       <hr />
-       <div class='typeahead-demo' ng-controller="TypeaheadController">
-         <span class= 'sameLine inputTitle' ><h3>Nationality</h3></span>
-         <input name='nationality' class='sameLine' type="text" ng-model="selected" uib-typeahead="nationality for nationality in nationalities | filter:$viewValue | limitTo:8" class="form-control">
-       </div>
        <hr />
        <div ng-controller="ButtonController">
-         <span class= 'sameLine inputTitle' ><h3>Lifestyle</h3></span>
+         <h3>Weather</h3>
+         <div name="weather" class="btn-group">
+           <input type="hidden" name="weather" value={{radioModel}}></input>
+           <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Warm'">Warm</label>
+           <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Snowy'">Snowy</label>
+           <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'DC'">Don't Care</label>
+         </div>
+       </div> 
+        <hr />
+
+       <div ng-controller="ButtonController">
+         <h3>Lifestyle</h3>
            <div  class="btn-group">
              <input type="hidden" name="lifestyle" value={{radioModel}}></input>
              <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Urban'" >Urban</label>
@@ -59,7 +71,7 @@
        </div>
      </form>
     </div>
-    </div>
+
 </div>
 
 

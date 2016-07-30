@@ -111,7 +111,7 @@
 
     function DropdownController($scope, $log) {
     	$scope.label = "Married";  
-    	$scope.selectedItem="Family";
+    	$scope.selectedItem="Single";
     	
         $scope.dropboxitemselected = function (item) { 
             $scope.selectedItem = item;
