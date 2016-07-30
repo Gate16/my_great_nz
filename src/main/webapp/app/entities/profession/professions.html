@@ -1,0 +1,89 @@
+<div>
+    <h2>Professions</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="profession.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" >
+                        Create new Profession
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="Query">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="region"><span>Region</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="professionId"><span>Profession Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="professionName"><span>Profession Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="year_2016"><span translate="myGreatNzApp.profession.year_2016">Year 2016</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="year_2017"><span translate="myGreatNzApp.profession.year_2017">Year 2017</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="year_2018"><span translate="myGreatNzApp.profession.year_2018">Year 2018</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="year_2019"><span translate="myGreatNzApp.profession.year_2019">Year 2019</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="growth"><span>Growth</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="growthPercentage"><span>Growth Percentage</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="profession in vm.professions track by profession.id">
+                    <td><a ui-sref="profession-detail({id:profession.id})">{{profession.id}}</a></td>
+                    <td>{{profession.region}}</td>
+                    <td>{{profession.professionId}}</td>
+                    <td>{{profession.professionName}}</td>
+                    <td>{{profession.year_2016}}</td>
+                    <td>{{profession.year_2017}}</td>
+                    <td>{{profession.year_2018}}</td>
+                    <td>{{profession.year_2019}}</td>
+                    <td>{{profession.growth}}</td>
+                    <td>{{profession.growthPercentage}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="profession-detail({id:profession.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="profession.edit({id:profession.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="profession.delete({id:profession.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
