@@ -11,7 +11,8 @@
     
     angular
 	.module('myGreatNzApp')
-	.controller('TabController',TabController);
+	.controller('ButtonController',ButtonController);
+    
     
     angular
 	.module('myGreatNzApp')
@@ -19,7 +20,7 @@
     
     HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
     TypeAheadController.$inject = ['$scope', '$http'];
-    TabController.$inject = ['$scope', '$window'];
+    ButtonController.$inject = ['$scope', '$window'];
     DropdownController.$inject = ['$scope', '$log'];
     
     function HomeController ($scope, Principal, LoginService, $state) {
@@ -85,29 +86,40 @@
 	
     	
     }
-    function TabController($scope, $window) {
-    	  $scope.tabs = [
-    	    { title:'Dynamic Title 1', content:'Dynamic content 1' },
-    	    { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-    	  ];
+    function ButtonController($scope, $window) {
+    	  $scope.singleModel = 1;
 
-    	  $scope.alertMe = function() {
-    	    setTimeout(function() {
-    	      $window.alert('You\'ve selected the alert tab!');
+    	  $scope.radioModel = 'DC';
+
+    	  $scope.checkModel = {
+    	    left: false,
+    	    middle: true,
+    	    right: false
+    	  };
+
+    	  $scope.checkResults = [];
+
+    	  $scope.$watchCollection('checkModel', function () {
+    	    $scope.checkResults = [];
+    	    angular.forEach($scope.checkModel, function (value, key) {
+    	      if (value) {
+    	        $scope.checkResults.push(key);
+    	      }
     	    });
-    	  };
-
-    	  $scope.model = {
-    	    name: 'Tabs'
-    	  };
+    	  });
     	}
+
     function DropdownController($scope, $log) {
     	$scope.label = "Married";  
+    	$scope.selectedItem="Family";
     	
-    	$scope.items = [
-    	    'The first choice!',
-    	    'And another choice for you.',
-    	    'but wait! A third!'
+        $scope.dropboxitemselected = function (item) { 
+            $scope.selectedItem = item;
+        }
+    	$scope.relationships = [
+    	    'Married without kids',
+    	    'Married with kids',
+    	    'Single'
     	  ];
 
     	  $scope.status = {

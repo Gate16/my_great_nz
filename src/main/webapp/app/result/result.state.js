@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider.state('result', {
             parent: 'app',
-            url: '/',
+            url: '/result',
             data: {
                 authorities: []
             },

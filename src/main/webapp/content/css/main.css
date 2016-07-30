@@ -116,7 +116,7 @@ background: linear-gradient(#0066cc, #004d99);
 height: 100vh;
 width: 100vw;	
 }
-.homeInput
+.centeredV
 {
 	margin: auto;
     width: 50%;
@@ -125,9 +125,13 @@ width: 100vw;
 }
 .sameLine
 {
-  display: inline-block;	
-	
+  display: inline-block;		
 }
+.sameLinePadding
+{
+  padding-left:5%;		
+}
+
 .inputTitle
 {
   padding-right: 5px;	
@@ -139,6 +143,7 @@ width: 100vw;
 
 	
 }
+
 
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
