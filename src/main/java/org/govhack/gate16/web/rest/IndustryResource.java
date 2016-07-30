@@ -20,10 +20,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Industry.
@@ -162,23 +158,31 @@ public class IndustryResource {
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    public List<Industry>  getIndustryByRegion(Pageable pageable, @PathVariable String region)
+    public List<Industry> getIndustryByRegion(Pageable pageable, @PathVariable String region)
             throws URISyntaxException{
         log.debug("REST request to get Industries by Region : {}", region);
 
-        List<Industry> industries = industryService.findByRegion(region);
-
-//        return Optional.ofNullable(industries)
-//                .map(result -> new ResponseEntity<>(
-//                        result,
-//                        HttpStatus.OK))
-//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-
-        return industries;
+        return industryService.findByRegion(region);
     }
 
-//        Page<Industry> page = industryService.findAll(pageable);
-//        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/public/industries");
-//        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    @RequestMapping(value = "/industries/percentage/{region}/{industry}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public String getPercentageIndustryByRegion(@PathVariable String region, @PathVariable String industry) throws URISyntaxException{
+        log.debug("REST request to get percentage of Industry:{} in Region:{}", industry, region);
+
+        return "{\"percentage\": " + industryService.getIndustryPercentage(region, industry) + "}";
+    }
+
+    @RequestMapping(value = "/industries/{region}/{industry}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public Industry getIndustryByRegionAndIndustryName(@PathVariable String region, @PathVariable String industry) throws URISyntaxException{
+        log.debug("REST request to get percentage of Industry:{} in Region:{}", industry, region);
+
+        return industryService.getIndustryByRegionAndIndustryName(region, industry);
+    }
 
 }
