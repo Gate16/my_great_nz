@@ -49,4 +49,8 @@ public interface CensusService {
      *  @return the list of entities
      */
     Page<Census> search(String query, Pageable pageable);
+
+    float getPercentageFor2013(String region, String interestArea, String type);
+
+    Census getCensus(String region, String interestArea, String type);
 }

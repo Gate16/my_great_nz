@@ -157,5 +157,22 @@ public class CensusResource {
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/censuses/percentage/{region}/{interestArea}/{type}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public String getPercentage(@PathVariable String region, @PathVariable String interestArea, @PathVariable String type) throws URISyntaxException{
+        return "{\"percentage\": " + censusService.getPercentageFor2013(region, interestArea, type) + "}";
+    }
+
+    @RequestMapping(value = "/censuses/{region}/{interestArea}/{type}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public Census getIndustryByRegionAndIndustryName(@PathVariable String region, @PathVariable String interestArea, @PathVariable String type) throws URISyntaxException{
+        return censusService.getCensus(region, interestArea, type);
+    }
+
+
 
 }

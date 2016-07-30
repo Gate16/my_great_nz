@@ -12,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
@@ -93,5 +90,22 @@ public class CensusServiceImpl implements CensusService{
     public Page<Census> search(String query, Pageable pageable) {
         log.debug("Request to search for a page of Censuses for query {}", query);
         return censusSearchRepository.search(queryStringQuery(query), pageable);
+    }
+
+    public float getPercentageFor2013(String region, String interestArea, String type){
+        float result = 0;
+
+        Integer total = censusRepository.getTotalAllTypeByRegionAndInterestAreaFor2013(region, interestArea);
+        Integer value = censusRepository.getValueByRegionAndInterestAreaAndTypeFor2013(region, interestArea, type);
+
+        if(total > 0) {
+            result = 100 * value / total;
+        }
+
+        return result;
+    }
+
+    public Census getCensus(String region, String interestArea, String type) {
+        return censusRepository.findByRegionAndInterestAreaAndType(region, interestArea, type);
     }
 }
