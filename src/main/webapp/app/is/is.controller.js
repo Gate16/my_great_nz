@@ -19,6 +19,8 @@
 
 		var vm = this;
 		$scope.region = $stateParams.region;
+        $scope.industry = $stateParams.industry;
+        $scope.profession = $stateParams.profession;
 
         $scope.map_url = $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?key=AIzaSyDqPw5bjILL-g1fbU56teCbY3eoM0-535M&q="
             + $stateParams.region + "+New+Zealand");
@@ -108,19 +110,18 @@
         $scope.dwellingData = [161226, 3423, 1791, 9669];
 
 
-        $scope.education =
-            [{"no":"1", "Education":"Auckland", "year_2006":"Auckland", "year_2013":"Auckland"},
-                {"no":"1", "Education":"No Qualification", "year_2006":"183975", "year_2013":"166782"},
-                {"no":"1", "Education":"Level 1 Certificate", "year_2006":"108102", "year_2013":"104454"},
-                {"no":"1", "Education":"Level 2 Certificate", "year_2006":"92259", "year_2013":"95241"},
-                {"no":"1", "Education":"Level 3 Certificate", "year_2006":"85101", "year_2013":"104508"},
-                {"no":"1", "Education":"Level 4 Certificate", "year_2006":"78816", "year_2013":"78876"},
-                {"no":"1", "Education":"Level 5 or Level 6 Diploma", "year_2006":"86436", "year_2013":"91923"},
-                {"no":"1", "Education":"Bachelor Degree and Level 7 Qualification", "year_2006":"129165", "year_2013":"168924"},
-                {"no":"1", "Education":"Post-graduate and Honours Degrees", "year_2006":"1923", "year_2013":"31854"},
-                {"no":"1", "Education":"Masters Degree", "year_2006":"2622", "year_2013":"36792"},
-                {"no":"1", "Education":"Doctorate Degree", "year_2006":"5391", "year_2013":"7428"},
-                {"no":"1", "Education":"Overseas Secondary School Qualification", "year_2006":"90618", "year_2013":"105201"}];
+        $scope.education = [
+                {"no":"2", "Education":"No Qualification", "year_2006":"183975", "year_2013":"166782"},
+                {"no":"3", "Education":"Level 1 Certificate", "year_2006":"108102", "year_2013":"104454"},
+                {"no":"4", "Education":"Level 2 Certificate", "year_2006":"92259", "year_2013":"95241"},
+                {"no":"5", "Education":"Level 3 Certificate", "year_2006":"85101", "year_2013":"104508"},
+                {"no":"6", "Education":"Level 4 Certificate", "year_2006":"78816", "year_2013":"78876"},
+                {"no":"7", "Education":"Level 5 or Level 6 Diploma", "year_2006":"86436", "year_2013":"91923"},
+                {"no":"8", "Education":"Bachelor Degree and Level 7 Qualification", "year_2006":"129165", "year_2013":"168924"},
+                {"no":"9", "Education":"Post-graduate and Honours Degrees", "year_2006":"1923", "year_2013":"31854"},
+                {"no":"10", "Education":"Masters Degree", "year_2006":"2622", "year_2013":"36792"},
+                {"no":"11", "Education":"Doctorate Degree", "year_2006":"5391", "year_2013":"7428"},
+                {"no":"12", "Education":"Overseas Secondary School Qualification", "year_2006":"90618", "year_2013":"105201"}];
 
         /*$http.get('/api/public/industries/' + $scope.industry)
         success(function (data) {
