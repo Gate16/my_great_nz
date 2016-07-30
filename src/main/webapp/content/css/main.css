@@ -332,3 +332,11 @@ ui bootstrap tweaks
 
 
 /* jhipster-needle-css-add-main JHipster will add new css style */
+
+.resultIcon{
+	font-size: 50px;
+}
+.resultLink{
+	color: inherit;
+  text-decoration: none;
+}
