@@ -43,6 +43,19 @@
             
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
-        
     </changeSet>
+
+    <changeSet id="20160730073524-3" author="Kevin">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/data/census.csv"
+                  separator=";"
+                  tableName="census">
+            <column name="region" type="STRING"/>
+            <column name="interest_area" type="STRING"/>
+            <column name="type" type="STRING"/>
+            <column name="year_2006" type="NUMERIC"/>
+            <column name="year_2013" type="NUMERIC"/>
+        </loadData>
+    </changeSet>
+
 </databaseChangeLog>
