@@ -1,41 +1,52 @@
 <div ng-cloak>
-    <div class="row">
-        <div class="col-md-4">
-            <span class="hipster img-responsive img-rounded"></span>
-        </div>
-        <div class="col-md-8">
-            <h1>Welcome, Java Hipster!</h1>
-            <p class="lead">This is your homepage</p>
-
-            <div ng-switch="vm.isAuthenticated()">
-                <div class="alert alert-success" ng-switch-when="true">
-                    You are logged in as user "{{vm.account.login}}".
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false">
-                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false">
-                    You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
-                </div>
-            </div>
-
-            <p>
-                If you have any question on JHipster:
-            </p>
-
-            <ul>
-                <li><a href="http://jhipster.github.io/" target="_blank">JHipster homepage</a></li>
-                <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank">JHipster on Stack Overflow</a></li>
-                <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank">JHipster bug tracker</a></li>
-                <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank">JHipster public chat room</a></li>
-                <li><a href="https://twitter.com/java_hipster" target="_blank" >follow @java_hipster on Twitter</a></li>
-            </ul>
-
-            <p>
-             <span>If you like JHipster, don't forget to give us a star on </span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank">Github</a>!
-            </p>
-        </div>
+    <div class="homeBackground">
+    <div class="homeInput">
+     <span><h1>What's Important to you?</h1> </span>
+     
+     <form class ="inputForm" id="inputForm" action="result.html">
+       <div class='typeahead-demo' ng-controller="TypeaheadCtrl">
+         <span class= 'sameLine inputTitle' ><h3>Profession</h3></span>
+         <input name= 'profession' class='sameLine' type="text" ng-model="selected" uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8" class="form-control">
+       </div>
+       <hr />
+       <div ng-controller="TabController">
+           <span class= 'sameLine inputTitle' ><h3>Weather Preference</h3></span>
+           <button type="button" class="btn btn-default btn-sm" ng-click="active = 1">Warm</button>
+           <button type="button" class="btn btn-default btn-sm" ng-click="active = 2">Snowy</button>
+           <button type="button" class="btn btn-default btn-sm" ng-click="active = 3">Don't Care</button>
+       </div> 
+        <hr />
+       <div class='typeahead-demo' ng-controller="TypeaheadCtrl">
+         <span class= 'sameLine inputTitle' ><h3>Nationality</h3></span>
+         <input name='nationality' class='sameLine' type="text" ng-model="selected" uib-typeahead="nationality for nationality in nationalities | filter:$viewValue | limitTo:8" class="form-control">
+       </div>
+       <hr />
+       <div class='typeahead-demo' ng-controller="DropdownController">
+         <div class="btn-group" uib-dropdown>
+           <button id="split-button" type="button" class="btn">Action</button>
+           <button type="button" class="btn" uib-dropdown-toggle>
+             <span class="caret"></span>
+             <span class="sr-only">Split button!</span>
+           </button>
+           <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+             <li role="menuitem"><a href="#">Married w/ Kids</a></li>
+             <li role="menuitem"><a href="#">Married w/o Kids</a></li>
+             <li role="menuitem"><a href="#">Single</a></li>
+           </ul>
+         </div>
+       </div>
+        <hr />
+       <div>
+         <input type="submit" value="Submit" >
+       </div>
+       
+       
+       family 
+       age 
+       lifestyle
+     </form>
+    </div>
     </div>
 </div>
+
+

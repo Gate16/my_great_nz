@@ -105,6 +105,42 @@ Main page styles
     background-size: contain;
 }
 
+.backgroundImage{
+	display: inline-block;
+	width: 100%;
+	background: url("../images/tealMountain.jpeg") no-repeat center top;
+}
+.homeBackground
+{
+background: linear-gradient(#0066cc, #004d99);	
+height: 100vh;
+width: 100vw;	
+}
+.homeInput
+{
+	margin: auto;
+    width: 50%;
+    padding: 10px;	
+	
+}
+.sameLine
+{
+  display: inline-block;	
+	
+}
+.inputTitle
+{
+  padding-right: 5px;	
+	
+}
+
+.inputForm
+{
+
+	
+}
+
+
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -118,6 +154,41 @@ only screen and (                min-resolution: 2dppx) {
         background-size: contain;
     }
 }
+
+/* ==========================================================================
+Bootstrap UI Typeahead
+========================================================================== */
+  .typeahead-demo .custom-popup-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    background-color: #f9f9f9;
+  }
+
+  .typeahead-demo .custom-popup-wrapper > .message {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    color: #868686;
+  }
+
+  .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+    position: static;
+    float: none;
+    display: block;
+    min-width: 160px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+/* ==========================================================================
+Bootstrap UI Tabs
+========================================================================== */
+form.tab-form-demo .tab-pane {
+    margin: 20px 20px;
+  }
 
 /* ==========================================================================
 Generic styles
