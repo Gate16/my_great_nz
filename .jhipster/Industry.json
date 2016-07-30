@@ -1,0 +1,42 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "industryName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "year2016",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year2017",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year2018",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "year2019",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "growth",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "growthPercentage",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20160729230846",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "industry",
+    "pagination": "infinite-scroll"
+}

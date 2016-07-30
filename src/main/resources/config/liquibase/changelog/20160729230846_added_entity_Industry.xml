@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity Industry.
+    -->
+    <changeSet id="20160729230846-2" author="jhipster">
+        <createTable tableName="industry">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="region" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="industry_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="year_2016" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="year_2017" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="year_2018" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="year_2019" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="growth" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="growth_percentage" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20160729230846-3" author="Kevin">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/data/Industry_Forecasts_by_Region_2016-2019.csv"
+                  separator=";"
+                  tableName="industry">
+            <column name="region" type="STRING"/>
+            <column name="industry_name" type="STRING"/>
+            <column name="year_2016" type="NUMERIC"/>
+            <column name="year_2017" type="NUMERIC"/>
+            <column name="year_2018" type="NUMERIC"/>
+            <column name="year_2019" type="NUMERIC"/>
+            <column name="growth" type="NUMERIC"/>
+            <column name="growth_percentage" type="NUMERIC"/>
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

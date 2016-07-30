@@ -1,0 +1,74 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myIndustryLabel">Create or edit a Industry</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.industry.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.industry.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_region">Region</label>
+            <input type="text" class="form-control" name="region" id="field_region"
+                    ng-model="vm.industry.region"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_industryName">Industry Name</label>
+            <input type="text" class="form-control" name="industryName" id="field_industryName"
+                    ng-model="vm.industry.industryName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_year2016">Year 2016</label>
+            <input type="number" class="form-control" name="year2016" id="field_year2016"
+                    ng-model="vm.industry.year2016"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_year2017">Year 2017</label>
+            <input type="number" class="form-control" name="year2017" id="field_year2017"
+                    ng-model="vm.industry.year2017"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_year2018">Year 2018</label>
+            <input type="number" class="form-control" name="year2018" id="field_year2018"
+                    ng-model="vm.industry.year2018"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_year2019">Year 2019</label>
+            <input type="number" class="form-control" name="year2019" id="field_year2019"
+                    ng-model="vm.industry.year2019"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_growth">Growth</label>
+            <input type="number" class="form-control" name="growth" id="field_growth"
+                    ng-model="vm.industry.growth"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_growthPercentage">Growth Percentage</label>
+            <input type="number" class="form-control" name="growthPercentage" id="field_growthPercentage"
+                    ng-model="vm.industry.growthPercentage"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -650,10 +650,10 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost:5432/my_great_nz</url>
+                    <url>jdbc:postgresql://govhack.czdxzvsj5wre.ap-southeast-2.rds.amazonaws.com:5432/govhackdbprod</url>
                     <defaultSchemaName />
-                    <username>my_great_nz</username>
-                    <password />
+                    <username>admin</username>
+                    <password></password>
                     <referenceUrl>hibernate:spring:org.govhack.gate16.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect&amp;hibernate.ejb.naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>

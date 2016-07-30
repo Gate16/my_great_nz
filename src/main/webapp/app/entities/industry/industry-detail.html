@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span>Industry</span> {{vm.industry.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Region</span></dt>
+        <dd>
+            <span>{{vm.industry.region}}</span>
+        </dd>
+        <dt><span>Industry Name</span></dt>
+        <dd>
+            <span>{{vm.industry.industryName}}</span>
+        </dd>
+        <dt><span>Year 2016</span></dt>
+        <dd>
+            <span>{{vm.industry.year2016}}</span>
+        </dd>
+        <dt><span>Year 2017</span></dt>
+        <dd>
+            <span>{{vm.industry.year2017}}</span>
+        </dd>
+        <dt><span>Year 2018</span></dt>
+        <dd>
+            <span>{{vm.industry.year2018}}</span>
+        </dd>
+        <dt><span>Year 2019</span></dt>
+        <dd>
+            <span>{{vm.industry.year2019}}</span>
+        </dd>
+        <dt><span>Growth</span></dt>
+        <dd>
+            <span>{{vm.industry.growth}}</span>
+        </dd>
+        <dt><span>Growth Percentage</span></dt>
+        <dd>
+            <span>{{vm.industry.growthPercentage}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="industry-detail.edit({id:vm.industry.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>
