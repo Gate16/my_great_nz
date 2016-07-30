@@ -2,69 +2,102 @@
 
     <div class="backgroundImage">
 
-
-        <div class="row isPage" ng-controller="IsController">
+        <div class="col-md-11 screen2-panel" style="margin: 50px;    padding-bottom: 15px">
             <h1>{{region}}</h1>
 
-            <div class="col-md-4"><img class="logo-img" src="content/images/auckland-logo.jpg"/></div>
+            <div class="col-md-4">
 
-            <div class="col-md-6">
-                <iframe
-                    width="100%"
-                    height="320"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDqPw5bjILL-g1fbU56teCbY3eoM0-535M
-            &q=Auckland" allowfullscreen>
-                </iframe>
+                        <img class="logo-img region-logo" src="content/images/{{region}}-logo.jpg"/>
             </div>
 
-            <div class="col-md-12 ">
+
+            <div class="col-md-8">
+                        <iframe
+                            width="100%"
+                            height="320"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDqPw5bjILL-g1fbU56teCbY3eoM0-535M
+            &q=Auckland+New+Zealand" allowfullscreen>
+                        </iframe>
+
+            </div>
+
+            <div class="col-md-12">
                 <blockquote>{{introductionText}}</blockquote>
             </div>
 
-
             <div class="col-md-6">
-                <canvas id="bar" class="chart chart-bar"
-                        chart-data="data" chart-labels="labels"> chart-series="series"
-                </canvas>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Industry</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        </canvas>
 
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-6">
-                <canvas id="bar2" class="chart chart-bar"
-                        chart-data="data" chart-labels="labels"> chart-series="series"
-                </canvas>
-            </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Industry</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        </canvas>
 
-
-            <div class="col-md-6">
-                <canvas id="line" class="chart chart-line" chart-data="data"
-                        chart-labels="labels" chart-series="series" chart-options="options"
-                        chart-dataset-override="datasetOverride" chart-click="onClick"
-                </canvas>
-
-            </div>
-
-            <div class="col-md-6">
-                <canvas id="line2" class="chart chart-line" chart-data="data"
-                        chart-labels="labels" chart-series="series" chart-options="options"
-                        chart-dataset-override="datasetOverride" chart-click="onClick"
-                </canvas>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-6">
-                <canvas id="doughnut" class="chart chart-doughnut"
-                        chart-data="data" chart-labels="labels">
-                </canvas>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Industry</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        </canvas>
+
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-6">
-                <canvas id="pie" class="chart chart-pie"
-                        chart-data="data" chart-labels="labels" chart-options="options">
-                </canvas>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Industry</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        </canvas>
+
+                    </div>
+                </div>
             </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Industry</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        </canvas>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-
 
     </div>
 </div>
