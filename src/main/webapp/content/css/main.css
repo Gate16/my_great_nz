@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway%7CShrikhand';
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -151,7 +151,7 @@ td{
 .backgroundImage{
 	display: inline-block;
 	width: 100%;
-    background: url("../images/new-zealand-wallpaper-26.jpg") no-repeat center top;
+    background: url("../images/L571-Canterbury-Canterbury-Elite-Images.jpg") no-repeat center top;
     background-size: cover;
     min-height: 800px;
 }
@@ -203,8 +203,7 @@ width: 100vw;
 
 .inputTitle
 {
-  padding-right: 5px;
-
+  font-family: 'Raleway', sans-serif;
 }
 
 /* ==========================================================================
@@ -269,6 +268,12 @@ Fonts
 	font-family: 'Shrikhand', cursive;	
 	
 }
+.regionTitleFont
+{
+	font-family: 'Raleway', sans-serif;
+	
+}
+
 
 /* ==========================================================================
 Bootstrap UI Typeahead
