@@ -4,6 +4,25 @@ body {
     color: #333;
 }
 
+/* RGB
+
+#009EC1
+#C5C5C5
+#6D8EA0
+#EFF1ED
+#59C3C3
+
+*/
+
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+    color: wheat;
+}
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -108,7 +127,8 @@ Main page styles
 .backgroundImage{
 	display: inline-block;
 	width: 100%;
-	background: url("../images/tealMountain.jpeg") no-repeat center top;
+    background: url("../images/new-zealand-wallpaper-26.jpg") no-repeat center top;
+    background-size: cover;
 }
 .homeBackground
 {
@@ -121,6 +141,7 @@ width: 100vw;
 	margin: auto;
     width: 50%;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 .sameLine
@@ -426,3 +447,7 @@ ui bootstrap tweaks
 	color: inherit;
   text-decoration: none;
 }
+
+
+
+
