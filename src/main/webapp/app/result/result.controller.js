@@ -47,5 +47,9 @@
             [28, 48, 40, 19, 86, 27, 90]
         ];
 
+
+        $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+        $scope.data = [300, 500, 100];
+
     }
 })();

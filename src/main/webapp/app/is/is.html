@@ -1,6 +1,64 @@
 <div ng-cloak>
     <div class="row isPage" ng-controller="IsController">
         <h1>{{region}}</h1>
-        <p>{{introductionText}}</p>
+        <div class="col-md-4"><img class="logo-img" src="content/images/auckland-logo.jpg"/></div>
+
+        <div class="col-md-6">
+                <iframe
+                    width="600"
+                    height="320"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDqPw5bjILL-g1fbU56teCbY3eoM0-535M
+            &q=Auckland" allowfullscreen>
+                </iframe>
+        </div>
+
+         <div class="col-md-12 "> <p>{{introductionText}}</p></div>
+
+
+        <div class="col-md-6">
+         <canvas id="bar" class="chart chart-bar"
+                chart-data="data" chart-labels="labels"> chart-series="series"
+        </canvas>
+
+        </div>
+
+        <div class="col-md-6">
+        <canvas id="bar2" class="chart chart-bar"
+                chart-data="data" chart-labels="labels"> chart-series="series"
+        </canvas>
+        </div>
+
+
+        <div class="col-md-6">
+            <canvas id="line" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-dataset-override="datasetOverride" chart-click="onClick"
+            </canvas>
+
+        </div>
+
+        <div class="col-md-6">
+            <canvas id="line2" class="chart chart-line" chart-data="data"
+                    chart-labels="labels" chart-series="series" chart-options="options"
+                    chart-dataset-override="datasetOverride" chart-click="onClick"
+            </canvas>
+        </div>
+
+        <div class="col-md-6">
+            <canvas id="doughnut" class="chart chart-doughnut"
+                    chart-data="data" chart-labels="labels">
+            </canvas>
+        </div>
+
+        <div class="col-md-6">
+            <canvas id="pie" class="chart chart-pie"
+                    chart-data="data" chart-labels="labels" chart-options="options">
+            </canvas>
+        </div>
+    </div>
+
+
+
     </div>
 </div>
