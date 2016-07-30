@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Census</span> {{vm.census.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Region</span></dt>
+        <dd>
+            <span>{{vm.census.region}}</span>
+        </dd>
+        <dt><span>Interest Area</span></dt>
+        <dd>
+            <span>{{vm.census.interestArea}}</span>
+        </dd>
+        <dt><span>Type</span></dt>
+        <dd>
+            <span>{{vm.census.type}}</span>
+        </dd>
+        <dt><span>Year 2006</span></dt>
+        <dd>
+            <span>{{vm.census.year2006}}</span>
+        </dd>
+        <dt><span>Year 2013</span></dt>
+        <dd>
+            <span>{{vm.census.year2013}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="census-detail.edit({id:vm.census.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

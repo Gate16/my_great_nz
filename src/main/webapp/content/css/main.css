@@ -129,6 +129,11 @@ Main page styles
     background-size: contain;
 }
 
+td{
+  padding:2%;	
+	
+}
+
 .backgroundImage{
 	display: inline-block;
 	width: 100%;
@@ -149,6 +154,13 @@ width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
 
 }
+.submitCenter
+{
+ vertical-align:middle;	
+ display: block;
+ margin: 0 auto;	
+}
+
 .sameLine
 {
   display: inline-block;
@@ -164,11 +176,6 @@ width: 100vw;
 
 }
 
-.inputForm
-{
-
-
-}
 /* ==========================================================================
 Details Page
 ========================================================================== */
