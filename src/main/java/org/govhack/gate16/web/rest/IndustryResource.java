@@ -153,7 +153,7 @@ public class IndustryResource {
         throws URISyntaxException {
         log.debug("REST request to search for a page of Industries for query {}", query);
         Page<Industry> page = industryService.search(query, pageable);
-        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/industries");
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/public/_search/industries");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
