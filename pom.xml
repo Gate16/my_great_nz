@@ -94,6 +94,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>com.ibm.watson.developer_cloud</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.jayway.awaitility</groupId>
             <artifactId>awaitility</artifactId>
             <version>${awaitility.version}</version>
