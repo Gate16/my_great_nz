@@ -11,7 +11,7 @@
             </div>
 
 
-            <div class="col-md-8">
+            <div class="col-md-12">
                         <iframe
                             width="100%"
                             height="320"
@@ -28,11 +28,12 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Industry: IT</h3>
                     </div>
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                                chart-data="industryData" chart-labels="labels_years" chart-series="industrySeries"
+                                chart-options="options_dafault">
                         </canvas>
 
                     </div>
@@ -42,13 +43,34 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Profession: Software Developer</h3>
                     </div>
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                                chart-data="professionData" chart-labels="labels_years" chart-series="professionSeries"
+                                chart-options="options_dafault">
                         </canvas>
 
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Household income</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" class="chart chart-bar"
+                                chart-data="incomeData" chart-labels="labels_income" chart-series="incomeSeries"
+                                chart-options="options_legent">
+                        </canvas>
+
+                    </div>
+                    <div class="alert alert-dismissible alert-info" >
+                        A household is either one person who usually resides alone, or two or more people who usually reside together and share facilities
+                        (such as for eating, cooking, or a living area; and bathroom and toilet) in a private dwelling.
                     </div>
                 </div>
             </div>
@@ -56,13 +78,17 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Dwelling</h3>
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        <canvas id="pie" class="chart chart-pie"
+                                chart-data="dwellingData" chart-labels="labels_dwelling" chart-options="options_pie">
                         </canvas>
 
+                    </div>
+
+                    <div class="alert alert-dismissible alert-info" >
+                        Other- Consists of mobile and improvised dwellings, roofless or rough sleepers, and dwellings in a motorcamp.
                     </div>
                 </div>
             </div>
@@ -70,13 +96,17 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Languages spoken</h3>
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="languagesData" chart-labels="labels_languages" chart-options="options_pie">
                         </canvas>
 
+                    </div>
+                    <div class="alert alert-dismissible alert-info">
+                        Information in this table is for the 15 most commonly spoken languages (excluding English)
+                        New Zealand Sign Language is also included as it is an official language of New Zealand.
                     </div>
                 </div>
             </div>
@@ -84,18 +114,87 @@
             <div class="col-md-6">
                 <div class="panel panel-success">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Industry</h3>
+                        <h3 class="panel-title">Country of Birth</h3>
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" class="chart chart-bar"
-                                chart-data="data" chart-labels="labels"> chart-series="series"
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="countryData" chart-labels="labels_country" chart-options="options_pie">
                         </canvas>
 
+                    </div>
+                    <div class="alert alert-dismissible alert-info" >
+                        Birthplace refers to the country where a person was born, and uses the name of the country at the time of the census.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Transport</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="doughnut" class="chart chart-doughnut"
+                                chart-data="transportData" chart-labels="labels_transport" chart-options="options_pie">
+                        </canvas>
+
+                    </div>
+                    <div class="alert alert-dismissible alert-info" >
+                        Main means of travel to work is the method a person aged 15 years and over used to travel the longest distance to their place of employment on census day
                     </div>
                 </div>
             </div>
 
 
+
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Education</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-hover ">
+                            <thead>
+                            <tr>
+                                <th>Education</th>
+                                <th>2006</th>
+                                <th>2013</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="x in education">
+                                <td>{{ x.Education }}</td>
+                                <td>{{ x.year_2006 }}</td>
+                                <td>{{ x.year_2013 }}</td>
+                            </tr>
+                            </tbody>
+                            </table>
+
+
+                    </div>
+                    <div class="alert alert-dismissible alert-info" >
+                        Highest qualification is derived for people aged 15 years and over, and combines highest secondary school qualification and
+                        post-school qualification to obtain a single highest qualification by category of attainment
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Weather</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="line" class="chart chart-line" chart-data="weatherData"
+                                chart-labels="labels_weather" chart-series="weatherSeries" chart-options="options"
+                                chart-dataset-override="datasetOverride" chart-click="onClick"
+                                chart-colors="colors">
+                        </canvas>
+
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
