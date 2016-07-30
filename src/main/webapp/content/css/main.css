@@ -149,6 +149,13 @@ width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
 
 }
+.submitCenter
+{
+ vertical-align:middle;	
+ display: block;
+ margin: 0 auto;	
+}
+
 .sameLine
 {
   display: inline-block;
@@ -164,11 +171,6 @@ width: 100vw;
 
 }
 
-.inputForm
-{
-
-
-}
 /* ==========================================================================
 Details Page
 ========================================================================== */
