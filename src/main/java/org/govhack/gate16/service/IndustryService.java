@@ -51,4 +51,8 @@ public interface IndustryService {
     Page<Industry> search(String query, Pageable pageable);
 
     List<Industry> findByRegion(String region);
+
+    float getIndustryPercentage(String regionName, String industryName);
+
+    Industry getIndustryByRegionAndIndustryName(String regionName, String industryName);
 }

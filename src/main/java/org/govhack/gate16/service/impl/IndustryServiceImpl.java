@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
@@ -101,4 +99,26 @@ public class IndustryServiceImpl implements IndustryService{
         List<Industry> industries = industryRepository.findByRegion(region);
         return industries;
     }
+
+    public float getIndustryPercentage(String regionName, String industryName) {
+        log.debug("Request to get industry percentage for region:{} with industry: {}", regionName, industryName);
+        float result = 0;
+
+        Integer totalManPowerByRegionAndIndustry = industryRepository.getTotalManPowerByRegionAndIndustry(regionName, industryName);
+        Integer totalManPowerOfAllIndustryInRegion = industryRepository.getTotalManPowerOfAllIndustryInRegion(regionName);
+
+        if(totalManPowerOfAllIndustryInRegion > 0) {
+            result = 100 * totalManPowerByRegionAndIndustry / totalManPowerOfAllIndustryInRegion;
+        }
+
+        log.debug("getIndustryPercentage: {} (%)", result );
+        return result;
+    }
+
+    public Industry getIndustryByRegionAndIndustryName(String regionName, String industryName) {
+        log.debug("Request to get industry detail for region:{} with industry: {}", regionName, industryName);
+
+        return industryRepository.findByRegionAndIndustryName(regionName, industryName);
+    }
+
 }
