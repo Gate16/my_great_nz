@@ -9,19 +9,21 @@
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
                     <input name="industry" type="text" class="form-control" placeholder="Your industry"
-                           ng-model="selected"/>
+                           ng-model="selected"
+                           ng-required="true"/>
                 </div>
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
                     <input name="profession" type="text" class="form-control" placeholder="Your profession"
                            ng-model="selected"
+                           ng-required="true"
                            uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8"/>
                 </div>
 
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
-                    <select name="age" class="form-control">
-                        <option>Your age</option>
+                    <select name="age" class="form-control" required>
+                        <option value="">Your age</option>
                         <option>10-14 Years</option>
                         <option>15-19 Years</option>
                         <option>20-24 Years</option>
@@ -45,11 +47,13 @@
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
                     <input name="nationality" type="text" class="form-control" placeholder="Your nationality"
                            ng-model="selected"
+                           ng-required="true"
                            uib-typeahead="nationality for nationality in nationalities | filter:$viewValue | limitTo:8"/>
                 </div>
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
-                    <select name="family" class="form-control" id="select">
+                    <select name="family" class="form-control" id="select" required>
+                        <option value="">Your status</option>
                         <option>Married without kids</option>
                         <option>Married with kids</option>
                         <option>Single</option>
@@ -58,26 +62,23 @@
 
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
-                    <div class="input-group">
-                        <span class="input-group-addon">Weather</span>
-                        <select name="weather" class="form-control" id="select">
+                        <select name="weather" class="form-control" id="select" required>
+                            <option value="">Weather you prefer</option>
                             <option>Warm</option>
                             <option>Snowy</option>
                             <option>Don't Care</option>
                         </select>
-                    </div>
                 </div>
 
                 <div class="form-group has-feedback" ng-controller="TypeaheadController">
-                    <div class="input-group">
-                        <span class="input-group-addon">Lifestyle</span>
-                        <select name="lifestyle" class="form-control" id="select2">
+                        <select name="lifestyle" class="form-control" id="select2" required>
+                            <option value="">Your lifestyle</option>
                             <option>Urban</option>
                             <option>Suburban</option>
                             <option>Rural</option>
                             <option>Don't Care</option>
                         </select>
-                    </div>
+
                 </div>
 
 
