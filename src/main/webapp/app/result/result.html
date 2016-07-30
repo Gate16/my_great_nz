@@ -76,17 +76,17 @@
 				</div>
 				<div class="panel-body">
 					<div class="col-md-3">
-						
+
 						<span class="glyphicon glyphicon-user resultIcon success" aria-hidden="true"></span>
 						<h6>Profession</h6>
 					</div>
 					<div class="col-md-3">
-						
+
 						<span class="glyphicon glyphicon-home resultIcon" aria-hidden="true"></span>
 						<h6>Family</h6>
 					</div>
 					<div class="col-md-3">
-						
+
 						<i class="wi wi-day-cloudy resultIcon" aria-hidden="true"></i>
 						<h6>Weather</h6>
 					</div>
@@ -94,7 +94,7 @@
 						<span class="glyphicon glyphicon-search resultIcon" aria-hidden="true"></span>
 						<h6>Hobby</h6>
 					</div>
-					
+
 					<div class="col-md-3">
 						<span>Lifestyle</span>
 						<span class="fa fa-anchor resultIcon" aria-hidden="true"></span>
@@ -109,7 +109,19 @@
 				<div class="panel-heading">
 					<h3 class="panel-title">Panel title</h3>
 				</div>
-				<div class="panel-body">Panel content</div>
+				<div class="panel-body">
+                    <canvas id="line" class="chart chart-line" chart-data="data"
+                            chart-labels="labels" chart-series="series" chart-options="options"
+                            chart-dataset-override="datasetOverride" chart-click="onClick">
+                    </canvas>
+
+                    <canvas id="bar" class="chart chart-bar"
+                            chart-data="data" chart-labels="labels"> chart-series="series"
+                    </canvas
+                </div>
+
+
+
 			</div>
 		</div>
 
