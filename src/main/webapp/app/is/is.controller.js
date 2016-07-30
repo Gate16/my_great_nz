@@ -49,7 +49,7 @@
             '$100,001 or More'];
 
 
-        $scope.incomeSeries = [ $scope.year_2006, $scope.year_2013 ];
+        $scope.incomeSeries = [ "2006", "2013" ];
         $scope.incomeData = [
                     [ 4698, 6411, 15258, 18633,  21648, 1245, 15654, 15996, 27468, 53217, 60621, 99285],
                     [ 4698, 6411, 15258, 18633,  21648, 1245, 15654, 15996, 27468, 53217, 60621, 99285],
@@ -103,9 +103,9 @@
 
         $scope.labels_dwelling = [
             'Separate house',
-            'Two or more flats/units/townhouses/apartments/houses joined together',
-            'Other occupied private dwellingsv',
-            'Occupied private dwelling not further defined'];
+            'Apartments/Units',
+            'Other private',
+            'Not defined'];
 
         $scope.dwellingData = [161226, 3423, 1791, 9669];
 
@@ -122,6 +122,90 @@
                 {"no":"10", "Education":"Masters Degree", "year_2006":"2622", "year_2013":"36792"},
                 {"no":"11", "Education":"Doctorate Degree", "year_2006":"5391", "year_2013":"7428"},
                 {"no":"12", "Education":"Overseas Secondary School Qualification", "year_2006":"90618", "year_2013":"105201"}];
+
+
+
+        $scope.labels_weather = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        $scope.weatherSeries = ['Rainy days %', 'Av temp'];
+        $scope.weatherData = [
+            [30, 30, 31, 34, 37, 41, 42, 38, 32, 33, 33, 33],
+            [12.4, 10.3,9.4,6.6,12.5,11.3,10.2,11.1,11.8,12.8,13,10.4]
+        ];
+
+        $scope.colors = ['#45b7cd', '#ff6384'];
+
+        $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+        $scope.options = {
+            scales: {
+                yAxes: [
+                    {
+                        id: 'y-axis-1',
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    },
+                    {
+                        id: 'y-axis-2',
+                        type: 'linear',
+                        display: true,
+                        position: 'right'
+                    }
+                ]
+            },
+            legend:{
+                display: true
+            }
+        };
+
+
+
+        $scope.options_dafault = {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }
+                 ]
+            }
+        };
+
+        $scope.options_legent = {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }
+                ]
+            },
+            legend:{
+                display: true
+            }
+        };
+
+        $scope.options_pie = {
+            scales: {
+                display:false,
+                yAxes: [
+                    {
+                        display:false,
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }
+                ]
+            },
+            legend:{
+                display: true,
+                position: "bottom"
+            }
+        };
 
         /*$http.get('/api/public/industries/' + $scope.industry)
         success(function (data) {

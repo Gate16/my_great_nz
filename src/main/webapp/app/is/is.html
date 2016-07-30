@@ -33,7 +33,7 @@
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
                                 chart-data="industryData" chart-labels="labels_years" chart-series="industrySeries"
-                                chart-options="{scaleStartValue: 0}">
+                                chart-options="options_dafault">
                         </canvas>
 
                     </div>
@@ -48,7 +48,7 @@
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
                                 chart-data="professionData" chart-labels="labels_years" chart-series="professionSeries"
-                                chart-options="{scaleStartValue: 0}">
+                                chart-options="options_dafault">
                         </canvas>
 
                     </div>
@@ -64,7 +64,7 @@
                     <div class="panel-body">
                         <canvas id="bar" class="chart chart-bar"
                                 chart-data="incomeData" chart-labels="labels_income" chart-series="incomeSeries"
-                                chart-options="{scaleStartValue: 0}">
+                                chart-options="options_legent">
                         </canvas>
 
                     </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="panel-body">
                         <canvas id="pie" class="chart chart-pie"
-                                chart-data="dwellingData" chart-labels="labels_dwelling" chart-options="options">
+                                chart-data="dwellingData" chart-labels="labels_dwelling" chart-options="options_pie">
                         </canvas>
 
                     </div>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="panel-body">
                         <canvas id="doughnut" class="chart chart-doughnut"
-                                chart-data="languagesData" chart-labels="labels_languages">
+                                chart-data="languagesData" chart-labels="labels_languages" chart-options="options_pie">
                         </canvas>
 
                     </div>
@@ -106,7 +106,7 @@
                     </div>
                     <div class="panel-body">
                         <canvas id="doughnut" class="chart chart-doughnut"
-                                chart-data="countryData" chart-labels="labels_country">
+                                chart-data="countryData" chart-labels="labels_country" chart-options="options_pie">
                         </canvas>
 
                     </div>
@@ -120,14 +120,16 @@
                     </div>
                     <div class="panel-body">
                         <canvas id="doughnut" class="chart chart-doughnut"
-                                chart-data="transportData" chart-labels="labels_transport">
+                                chart-data="transportData" chart-labels="labels_transport" chart-options="options_pie">
                         </canvas>
 
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6">
+
+
+            <div class="col-md-12">
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <h3 class="panel-title">Education</h3>
@@ -150,6 +152,23 @@
                             </tbody>
                             </table>
 
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Weather</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="line" class="chart chart-line" chart-data="weatherData"
+                                chart-labels="labels_weather" chart-series="weatherSeries" chart-options="options"
+                                chart-dataset-override="datasetOverride" chart-click="onClick"
+                                chart-colors="colors">
+                        </canvas>
 
                     </div>
                 </div>
