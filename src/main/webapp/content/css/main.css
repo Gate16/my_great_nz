@@ -92,10 +92,15 @@ Logo styles
 }
 
 .logo .logo-img {
-    height: 45px;
+    height: 40px;
     display: inline-block;
 }
-
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
 /* ==========================================================================
 Main page styles
 ========================================================================== */
@@ -184,13 +189,13 @@ blockquote {
 }
 blockquote:before {
 
-content:”\201C”;
+content:ï¿½\201Cï¿½;
 
 }
 
 blockquote:after {
 
-content:”\201D”;
+content:ï¿½\201Dï¿½;
 
 }
 blockquote:before {
