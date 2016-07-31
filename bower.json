@@ -47,7 +47,7 @@
     },
     "angular-chart.js": {
       "main": [
-        "dist/angular-chart.min.js"
+        "dist/angular-chart.js"
       ]
     },
     "bootstrap": {
