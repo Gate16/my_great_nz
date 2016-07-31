@@ -19,8 +19,8 @@
 
 		var vm = this;
 		$scope.region = $stateParams.region;
-        $scope.industry = $stateParams.industry;
-        $scope.profession = $stateParams.profession;
+        $scope.industry = getParameterByName('industry');
+        $scope.profession = getParameterByName('profession');
 
         $scope.map_url = $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?key=AIzaSyDqPw5bjILL-g1fbU56teCbY3eoM0-535M&q="
             + $stateParams.region + "+New+Zealand");
@@ -223,6 +223,16 @@
 			$scope.industryData = items;
 		});
 
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+		
 
 	}
 })();
