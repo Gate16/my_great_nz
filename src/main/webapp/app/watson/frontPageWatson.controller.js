@@ -4,7 +4,7 @@
     angular.module('myGreatNzApp')
         .controller('FrontPageWatsonController', FrontPageWatsonController);
 
-    FrontPageWatsonController.$inject = ['$scope', 'Principal', 'LoginService', 'IsController', '$state'];
+    FrontPageWatsonController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
 
 //    var audio = document.getElementById('audio');
 //    var wavsource = document.getElementById('wavsource');
