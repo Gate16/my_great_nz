@@ -37,7 +37,7 @@ public class WatsonResource {
             TextToSpeech textService = new TextToSpeech();
             textService.setUsernameAndPassword("a5d1f0fa-0701-4e69-a7fa-7950076a6893", "hTXrzxyiw3Xk");
 
-            String voice = "en-US_AllisonVoice";
+            String voice = "en-US_LisaVoice";
 
             //String format = "audio/ogg; codecs=opus";
             in = textService.synthesize(text, new Voice(voice, null, null), AudioFormat.WAV).execute();

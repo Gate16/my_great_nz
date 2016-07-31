@@ -6,17 +6,15 @@
 
     ResultPageWatsonController.$inject = ['$scope', '$state'];
 
-//    var audio = document.getElementById('audio');
-//    var wavsource = document.getElementById('wavsource');
+    function ResultPageWatsonController($scope) {
+        $scope.audio = document.getElementById('audio');
+        $scope.wavsource = document.getElementById('wavsource');
+        $scope.text = "";
 
-    function ResultPageWatsonController () {
-        var text ="Result Page Watson Controller"
-        wavsource.src = '/api/public/speak?text=' + text;
-
-//        audio.load();
-//        audio.play();
+        $scope.init = function(newText) {
+            $scope.text = newText;
+            wavsource.src = '/api/public/speak?text=' + $scope.text;
+        };
     }
-
-    ResultPageWatsonController();
 
 })();

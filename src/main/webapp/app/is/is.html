@@ -1,4 +1,11 @@
 <div ng-cloak>
+    <div ng-controller="ResultPageWatsonController" ng-init="init(introductionText)">
+        <div style="float:right">
+            <audio controls preload="auto" autobuffer autoplay id="audio">
+                <source id="wavsource" type="audio/wav">
+            </audio>
+        </div>
+    </div>
 
     <div class="backgroundImage">
 
@@ -196,6 +203,7 @@
                 </div>
             </div>
         </div>
+
 
     </div>
 </div>
