@@ -18,15 +18,28 @@
                 <div class="mainPageInputText sameLinePage1">
                     <div class="sameLinePage1">I work in&nbsp;</div>
 
-                    <input name="industry" type="text" class="form-control form-control-custom sameLinePage1"
-                           placeholder="(my industry)"
-                           uib-typeahead="industry for industry in industries | filter:$viewValue | limitTo:8"/>
+
+                    <select name="industry" class="form-control form-control-custom sameLinePage1" required>
+                        <option value="">(my industry)</option>
+                        <option>Agriculture</option>
+                        <option>Tourism</option>
+                        <option>Banking</option>
+                        <option>Insurance</option>
+                        <option>Media</option>
+                    </select>
+
 
                     <div class="sameLinePage1">&nbsp;doing&nbsp;</div>
 
-                    <input name="profession" type="text" class="form-control form-control-custom sameLinePage1"
-                           placeholder="(my job)"
-                           uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8"/>
+                    <select name="profession" class="form-control form-control-custom sameLinePage1" required>
+                        <option value="">(my job)</option>
+                        <option>Management</option>
+                        <option>IT Professional</option>
+                        <option>Human Resources</option>
+                        <option>Finance</option>
+                        <option>Real Estate</option>
+                        <option>Farmer</option>
+                    </select>
 
                     <div class="sameLinePage1">&nbsp;I am&nbsp;</div>
 
