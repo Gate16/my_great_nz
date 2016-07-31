@@ -30,21 +30,21 @@ public class WatsonServiceTest {
     @Test
     public void testConnection() {
         TextToSpeech service = new TextToSpeech();
-        service.setUsernameAndPassword("username", "password");
+        service.setUsernameAndPassword("", "");
 
         List<Voice> voices = service.getVoices().execute();
         System.out.println(voices);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     public void writeSoundFile(){
         TextToSpeech service = new TextToSpeech();
         service.setUsernameAndPassword("", "");
 
         try {
-            //String text = "based on what you have told us, we think you would love to live in Canterbury. The Canterbury region is a great option for you because it has amazing scenery, heaps to do outside, job opportunities in farm management and Christchurch has a thriving social scene with pubs, clubs and cafes and we know these things are important to you. When the temperature drops, Canterbury peaks become a winter playground - with more ski areas than anywhere in the southern hemisphere";
-            String text = "Welcome";
+            String text = "Based on what you have told us, we think you would love Canterbury. The Canterbury region has amazing scenery, jobs in farm management and Christchurch has a thriving social scene. When the temperature drops, Canterbury peaks become a winter playground with more ski areas than anywhere in the southern hemisphere. We know these things are important to you.";
+            //String text = "Welcome";
             InputStream stream = service.synthesize (text, Voice.EN_LISA, AudioFormat.WAV).execute();
 
             InputStream in = WaveUtils.reWriteWaveHeader(stream);
