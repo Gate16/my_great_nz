@@ -213,15 +213,15 @@
             }
         );*/
 
-        /*//console.log(Industries);
-		Industries.Industries({
+        /*//console.log(Industries);*/
+		Industries.query({
 			region : $scope.region,
 			industry : $scope.industry
 		}, function(result) {
 			var items = [ [ result.year2016, result.year2017, result.year2018,
 					result.year2019 ] ];
 			$scope.industryData = items;
-		});*/
+		});
 
 
 	}

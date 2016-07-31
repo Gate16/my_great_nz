@@ -63,8 +63,5 @@
   },
   "scripts": {
     "test": "gulp test"
-  },
-  "dependencies": {
-    "chart.js": "^2.2.0"
   }
 }

@@ -29,7 +29,7 @@
     "weather-icons": "^2.0.10",
     "font-awesome": "Font-Awesome#^4.6.3",
     "angular-chart.js": "^1.0.0",
-    "chart.js": "npm:chart.js#^2.2.0"
+    "Chart.min": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"
   },
   "devDependencies": {
     "angular-mocks": "1.5.5"
@@ -45,9 +45,14 @@
         "angular": "1.5.5"
       }
     },
+    "angular-chart.js": {
+      "main": [
+        "dist/angular-chart.min.js"
+      ]
+    },
     "bootstrap": {
       "main": [
-        "dist/css/bootstrap.css"
+        "dist/css/bootstrap.min.css"
       ]
     }
   },
