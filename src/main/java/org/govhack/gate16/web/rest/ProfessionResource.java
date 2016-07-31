@@ -54,7 +54,7 @@ public class ProfessionResource {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("profession", "idexists", "A new profession cannot already have an ID")).body(null);
         }
         Profession result = professionService.save(profession);
-        return ResponseEntity.created(new URI("/api/professions/" + result.getId()))
+        return ResponseEntity.created(new URI("/api/public/professions/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert("profession", result.getId().toString()))
             .body(result);
     }
@@ -98,7 +98,7 @@ public class ProfessionResource {
         throws URISyntaxException {
         log.debug("REST request to get a page of Professions");
         Page<Profession> page = professionService.findAll(pageable); 
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/professions");
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/public/professions");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
