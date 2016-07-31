@@ -113,8 +113,10 @@ Logo styles
     display: inline-block;
 }
 .region-logo {
-    height: 320px;
-    width: 320px;
+    height: 322px;
+    position: absolute;
+    z-index: 10;
+    width: 370px;
 }
 .navbar {
     position: relative;
