@@ -35,13 +35,23 @@
         for (var i = 0; i < arrayLength; i++) {
             var region = $scope.regions[i];
 
-            region.industry = {'name':'Tourism', 'value':getRandom(2,50)};
-            region.profession = {'name':'IT Professional', 'value':getRandom(100,1000)};
+            region.industry = {'name':getParameterByName('industry'), 'value':getRandom(2,50)};
+            region.profession = {'name':getParameterByName('profession'), 'value':getRandom(100,1000)};
             region.age = getRandom(10000,40000);
-            region.nationality = {'name':'New Zealand', 'value':getRandom(2,50)};
-            region.rainydays = getRandom(2,50);
+            region.nationality = {'name':getParameterByName('nationality'), 'value':getRandom(2,50)};
+            region.rainydays = getRandom(50,365);
 
             console.log($scope.regions[i]);
+        }
+        
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
 
     }
