@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 {
   font-family: 'Raleway', sans-serif;
   font-size: x-large;
-  color: wheat;	
+  color: wheat;
 }
 
 /* ==========================================================================
@@ -79,7 +79,7 @@ General Navbar styles
 ========================================================================== */
 .webPageTitle
 {
-font-family: 'Shrikhand', cursive;	
+font-family: 'Shrikhand', cursive;
 }
 
 
@@ -210,6 +210,7 @@ width: 100vw;
 .sameLine
 {
   display: inline-block;
+
 }
 .sameLinePadding
 {
@@ -280,13 +281,13 @@ Fonts
 ========================================================================== */
 .titleFont
 {
-	font-family: 'Shrikhand', cursive;	
-	
+	font-family: 'Shrikhand', cursive;
+
 }
 .regionTitleFont
 {
 	font-family: 'Raleway', sans-serif;
-	
+
 }
 
 
@@ -590,4 +591,28 @@ blockquote p {
     background-color: white;
     margin: 5px;
     width: 48.66666667%
+}
+
+.sameLinePage1{
+    float:left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.sameLinePageText{
+    height: 40px;
+}
+
+.form-control-custom{
+    width: 150px;
+    height: 33px;
+    background: none;
+    box-shadow: none;
+    color: #eff1ed;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
