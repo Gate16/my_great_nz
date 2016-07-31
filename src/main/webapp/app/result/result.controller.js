@@ -35,10 +35,10 @@
         for (var i = 0; i < arrayLength; i++) {
             var region = $scope.regions[i];
 
-            region.industry = getRandom(2,50);
-            region.profession.name = 'IT';
-            region.age = getRandom(2,50);
-            region.nationality = getRandom(2,50);
+            region.industry = {'name':'Tourism', 'value':getRandom(2,50)};
+            region.profession = {'name':'IT Professional', 'value':getRandom(100,1000)};
+            region.age = getRandom(10000,40000);
+            region.nationality = {'name':'New Zealand', 'value':getRandom(2,50)};
             region.rainydays = getRandom(2,50);
 
             console.log($scope.regions[i]);
