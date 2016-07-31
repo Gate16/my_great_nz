@@ -36,7 +36,7 @@
             var region = $scope.regions[i];
 
             region.industry = getRandom(2,50);
-            region.profession = getRandom(2,50);
+            region.profession.name = 'IT';
             region.age = getRandom(2,50);
             region.nationality = getRandom(2,50);
             region.rainydays = getRandom(2,50);

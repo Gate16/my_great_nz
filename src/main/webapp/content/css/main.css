@@ -237,8 +237,9 @@ Details Page
 }
 
 blockquote {
-  background: #f9f9f9;
+  background: rgba(249, 249, 249, 0.8);
   border-left: 10px solid #ccc;
+  font-family: 'Raleway', sans-serif;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
