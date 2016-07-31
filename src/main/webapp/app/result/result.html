@@ -2,7 +2,7 @@
     <div class="backgroundImage">
 
         <div style="margin-top: 20px">
-
+		<h1><b>Your Matches</b></h1>
 
             <div ng-repeat="region in regions track by region.id">
 
@@ -21,14 +21,14 @@
                             <div class="panel-body screen2-panel-inner">
                                 <div class="row">
                                     <div class="form-group">
-                                        <h4 class="progress-label">The {{region.industry.name}} industry makes up <b>{{region.industry.value}}%</b> of the local economy</h4>
+                                        <h3 class="progress-label">The {{region.industry.name}} industry makes up <b>{{region.industry.value}}%</b> of the local economy</h3>
 
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="form-group">
-                                        <h4 class="progress-label">There are <b>{{region.profession.value}}</b> {{region.profession.name}} Jobs</h4>
+                                        <h3 class="progress-label">There are <b>{{region.profession.value}}</b> {{region.profession.name}} Jobs</h3>
 
                              
                                     </div>
@@ -38,13 +38,13 @@
 
                                 <div class="row">
                                     <div class="form-group">
-                                        <h4 class="progress-label">There are <b>{{region.age}}</b> people in your age bracket</h4>
+                                        <h3 class="progress-label">There are <b>{{region.age}}</b> people in your age bracket</h3>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="form-group">
-                                        <h4 class="progress-label">{{region.nationality.name}} nationals make up <b>{{region.nationality.value}}%</b> of the population</h4>
+                                        <h3 class="progress-label">{{region.nationality.name}} nationals make up <b>{{region.nationality.value}}%</b> of the population</h3>
 
                              
                                     </div>
@@ -53,12 +53,13 @@
 
                                 <div class="row">
                                     <div class="form-group">
-                                        <h4 class="progress-label">There were <b>{{region.rainydays}}</b> rainy days last year</h4>
+                                        <h3 class="progress-label">There were <b>{{region.rainydays}}</b> rainy days last year</h3>
 
                 
                                     </div>
                                 </div>
-					    
+					         <input type="button" value="Show me more!" class="btn btn-lg btn-success submitCenter">
+               
                 
                             </div>
                 </a>
