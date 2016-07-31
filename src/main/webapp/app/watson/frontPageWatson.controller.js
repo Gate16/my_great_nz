@@ -18,35 +18,16 @@
 
         $scope.audio = document.getElementById('audio');
         $scope.wavsource = document.getElementById('waveSourceFrontPage');
-        $scope.text = "Welcome to our page"
+        $scope.text = "Welcome"
 
         $scope.init = function(text) {
             $scope.wavsource.src = '/api/public/speak?text=' + text;
 
-            $scope.audio.load();
-            $scope.audio.play();
+//            $scope.audio.load();
+//            $scope.audio.play();
          }
-
-        $scope.onClick = function () {
-            console.log("Correct");
-
-            $scope.wavsource.src = '/api/public/speak?text=Hardcoded';
-
-            $scope.audio.load();
-            $scope.audio.play();
-        };
-
 
         $scope.init($scope.text);
     }
-
-    function test() {
-            console.log("Correct");
-
-            $scope.wavsource.src = '/api/public/speak?text=Hardcoded';
-
-            $scope.audio.load();
-            $scope.audio.play();
-    };
 
 })();
