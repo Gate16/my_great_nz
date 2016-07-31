@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 {
   font-family: 'Raleway', sans-serif;
   font-size: x-large;
-  color: wheat;	
+  color: wheat;
 }
 
 /* ==========================================================================
@@ -113,12 +113,8 @@ Logo styles
     display: inline-block;
 }
 .region-logo {
-    height: 323px;
-    width: 370px;
-    position: absolute;
-    top: 0;
-    /* right: 0px; */
-    z-index: 10;
+    height: 320px;
+    width: 320px;
 }
 .navbar {
     position: relative;
@@ -164,7 +160,7 @@ td{
 	width: 100%;
     background: url("../images/L571-Canterbury-Canterbury-Elite-Images.jpg") no-repeat center top;
     background-size: cover;
-    min-height: 1000px;
+    min-height: 800px;
 }
 .homeBackground
 {
@@ -237,9 +233,8 @@ Details Page
 }
 
 blockquote {
-  background: rgba(249, 249, 249, 0.8);
+  background: #f9f9f9;
   border-left: 10px solid #ccc;
-  font-family: 'Raleway', sans-serif;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -569,10 +564,27 @@ ui bootstrap tweaks
 }
 
 .screen2-progress-panel{
-    margin-left: 120px;
+    margin-left: 100px;
 }
 
-
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
 
 .charts-panel{
     background-color: white;
@@ -582,4 +594,28 @@ ui bootstrap tweaks
 
 .alert-info{
     min-height: 70px;
+}
+
+.sameLinePage1{
+    float:left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.sameLinePageText{
+    height: 40px;
+}
+
+.form-control-custom{
+    width: 150px;
+    height: 33px;
+    background: none;
+    box-shadow: none;
+    color: #eff1ed;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+    -webkit-appearance: none;
 }

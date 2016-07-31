@@ -20,9 +20,9 @@ spring:
     jackson:
         serialization.indent_output: true
     datasource:
-        url: jdbc:postgresql://govhack.czdxzvsj5wre.ap-southeast-2.rds.amazonaws.com:5432/govhackdbprod
+        url: jdbc:postgresql://localhost:5432/govhackdb
         name:
-        username: admin
+        username: postgres
         password:
     jpa:
         database-platform: org.govhack.gate16.domain.util.FixedPostgreSQL82Dialect

@@ -1,40 +1,28 @@
-    <div ng-cloak>
+<div ng-cloak>
     <div class="backgroundImage">
 
-        <div ng-controller="FrontPageWatsonController" >
-            <div style="float:right">
-                <audio controls preload="auto" autobuffer autoplay id="audio">
-                    <source id="waveSourceFrontPage" type="audio/wav">
-                </audio>
-            </div>
-        </div>
-
-        <div class="centeredV" style="margin-top: 20px">
+        <div class="centeredV form-horizontal" style="margin-top: 20px;">
             <span><h1 class="inputTitle">A little about me...</h1> </span>
 
             <form class="middleAlignText inputForm" id="inputForm" action="/#/result">
 
-                <span class="mainPageInputText sameLine">I work in</span> 
-                <div class="sameLine has-feedback" ng-controller="TypeaheadController">
-                    <input name="industry" type="text" class="" placeholder="(my industry)"
-                           ng-model="selected"
+
+                <div class="mainPageInputText sameLinePage1">
+                    <div class="sameLinePage1">I work in&nbsp;</div>
+
+                    <input name="industry" type="text" class="form-control form-control-custom sameLinePage1"
+                           placeholder="(my industry)"
                            uib-typeahead="industry for industry in industries | filter:$viewValue | limitTo:8"/>
-                <span class="mainPageInputText">, </span> 
-                </div>
-                 
-                 
-                <div class="sameLine  has-feedback" ng-controller="TypeaheadController">
-                  <span class="mainPageInputText">doing </span> 
-                    <input name="profession" type="text" class="" placeholder="(my job)"
-                           ng-model="selected"
+
+                    <div class="sameLinePage1">&nbsp;doing&nbsp;</div>
+
+                    <input name="profession" type="text" class="form-control form-control-custom sameLinePage1"
+                           placeholder="(my job)"
                            uib-typeahead="profession for profession in professions | filter:$viewValue | limitTo:8"/>
-                <span class="mainPageInputText sameLine">. </span>
-                </div>
 
+                    <div class="sameLinePage1">&nbsp;I am&nbsp;</div>
 
-                <div class=" has-feedback sameLine" ng-controller="TypeaheadController">
-                  <span class="mainPageInputText sameLine">I am </span> 
-                    <select name="age" class=" sameLine" required>
+                    <select name="age" class="form-control form-control-custom sameLinePage1" required>
                         <option value="">(my age)</option>
                         <option>10-14 Years</option>
                         <option>15-19 Years</option>
@@ -53,22 +41,17 @@
                         <option>80-84 Years</option>
                         <option>85 Years And Over</option>
                     </select>
-                     <span class="mainPageInputText sameLine">, </span> 
-                </div>
 
+                    <div class="sameLinePage1">&nbsp;originally from&nbsp;</div>
 
-                <div class="sameLine has-feedback" ng-controller="TypeaheadController">
-                    <span class="mainPageInputText sameLine">originally from </span> 
-                    <input name="nationality" type="text" class="sameLine" placeholder="my birthplace"
-                           ng-model="selected"
+                    <input name="nationality" type="text" class="form-control form-control-custom sameLinePage1"
+                           placeholder="my birthplace"
                            ng-required="true"
                            uib-typeahead="nationality for nationality in nationalities | filter:$viewValue | limitTo:8"/>
-                <span class="mainPageInputText sameLine">, </span> 
-                </div>
 
-                <div class="middleAlignText sameLine has-feedback" ng-controller="TypeaheadController">
-                    <span class="mainPageInputText sameLine">and </span> 
-                    <select name="family" class="sameLine" id="select" required>
+                    <div class="sameLinePage1">&nbsp;and&nbsp;</div>
+
+                    <select name="family" class="form-control form-control-custom sameLinePage1" id="select" required>
                         <option value="">My relationship status</option>
                         <option>Married without kids</option>
                         <option>Married with kids</option>
@@ -76,34 +59,33 @@
                         <option>in a complicated situation</option>
                         <option>in a situation I'd rather not disclose</option>
                     </select>
-                    <span class=" mainPageInputText ">. </span>
+
+                    <div class="sameLinePage1">&nbsp;I would love to live&nbsp;</div>
+
+                    <select name="lifestyle" class="form-control form-control-custom sameLinePage1" id="select2"
+                            required>
+                        <option value="">My lifestyle</option>
+                        <option>in an Urban setting</option>
+                        <option>in a Suburban setting</option>
+                        <option>in a Rural setting</option>
+                        <option>anywhere</option>
+                    </select>
+
+                    <div class="sameLinePage1">&nbsp;with&nbsp;</div>
+
+                    <select name="weather" class="form-control form-control-custom sameLinePage1" id="select" required>
+                        <option value="">My perfect climate</option>
+                        <option>Warm</option>
+                        <option>Snowy</option>
+                        <option>any kind of</option>
+                    </select>
+
+                    <div class="sameLinePage1">&nbsp;weather.</div>
                 </div>
 
-                <div class="middleAlignText sameLine has-feedback" ng-controller="TypeaheadController">
-                  <span class="middleAlignText mainPageInputText ">I would love to live  </span>
-                        <select name="lifestyle" class="middleAlignText" id="select2" required>
-                            <option value="">My lifestyle</option>
-                            <option>in an Urban setting</option>
-                            <option>in a Suburban setting</option>
-                            <option>in a Rural setting</option>
-                            <option>anywhere</option>
-                        </select>
-                   <span class="mainPageInputText sameLine">, </span>
-                </div>
-
-                <div class="sameLine has-feedback" ng-controller="TypeaheadController">
-                   <span class="middleAlignText mainPageInputText sameLine"> with</span>
-                        <select name="weather" class="sameLine" id="select" required>
-                            <option value="">My perfect climate</option>
-                            <option>Warm</option>
-                            <option>Snowy</option>
-                            <option>any kind of</option>
-                        </select>
-                        <span class="mainPageInputText sameLine"> weather.</span>
-                </div>
 
                 <div>
-                    
+
                     <input type="submit" value="Find match" class="btn btn-lg btn-success submitCenter">
                 </div>
             </form>
